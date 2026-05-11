@@ -3,6 +3,12 @@ locale = "en-us"
 title = "Yadavilli Solutions | AI Consulting"
 theme = "blowfish"
 
+[languages]
+  [languages.en]
+    languageCode = "en-us"
+    contentDir = "content"
+    weight = 1
+
 [params]
   colorScheme = "dark"
   defaultAppearance = "dark"

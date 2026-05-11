@@ -8,3 +8,4 @@
 - **Pivot**: Shifted focus away from SAP to Legacy Modernization, App Rationalization, RPA to Agentic AI, and PAaaS.
 - Updated all content pages (Home, Services, Products, Case Studies) to reflect this new strategic direction.
 - **New Offerings**: Added "AI Shoring", "AI Governance", and "FinOps for AI" to the service portfolio.
+- **Push**: Committed all changes and pushed the code to the remote repository (GitHub).
