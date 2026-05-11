@@ -1,0 +1,5 @@
+name = "yadavillidotcom"
+pages_build_output_dir = "public"
+
+[site]
+bucket = "public"
