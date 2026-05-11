@@ -16,7 +16,7 @@ theme = "blowfish"
   showTableOfContents = true
   
   [params.header]
-    layout = "fixed"
+    layout = "fixed-fill-blur"
   
   [params.footer]
     showCopyright = true
@@ -24,8 +24,15 @@ theme = "blowfish"
 
   [params.homepage]
     layout = "hero"
+    homepageImage = "img/hero.png"
     showRecent = true
     showRecentItems = 3
+    disableHeroImageFilter = false
+
+  [params.author]
+    name = "Yadavilli Solutions"
+    headline = "Modernizing Enterprise Intelligence with **Agentic AI**"
+    image = "img/hero.png"
 
   [params.social]
     linkedin = "yadavilli"
