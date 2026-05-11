@@ -1,5 +1,6 @@
 name = "yadavillidotcom"
 main = "workers-site/index.js"
+compatibility_date = "2026-05-11"
 
 [site]
 bucket = "public"
