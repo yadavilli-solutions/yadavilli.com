@@ -1,0 +1,57 @@
+baseURL = "https://yadavilli.com/"
+locale = "en-us"
+title = "Yadavilli Solutions | AI Consulting"
+theme = "blowfish"
+
+[params]
+  colorScheme = "dark"
+  defaultAppearance = "dark"
+  showSummary = true
+  showTableOfContents = true
+  
+  [params.header]
+    layout = "fixed"
+  
+  [params.footer]
+    showCopyright = true
+    showPoweredBy = false
+
+  [params.homepage]
+    layout = "hero"
+    showRecent = true
+    showRecentItems = 3
+
+  [params.social]
+    linkedin = "yadavilli"
+    twitter = "YadavilliAI"
+    github = "yadavilli"
+
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 10
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 20
+  [[menu.main]]
+    name = "Services"
+    url = "/services/"
+    weight = 30
+  [[menu.main]]
+    name = "Products"
+    url = "/products/"
+    weight = 35
+  [[menu.main]]
+    name = "Insights"
+    url = "/insights/"
+    weight = 40
+  [[menu.main]]
+    name = "Case Studies"
+    url = "/case-studies/"
+    weight = 50
+  [[menu.main]]
+    name = "Contact"
+    url = "/contact/"
+    weight = 60
