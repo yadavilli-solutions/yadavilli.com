@@ -3,4 +3,3 @@ main = "workers-site/index.js"
 
 [site]
 bucket = "public"
-entry-point = "workers-site"
