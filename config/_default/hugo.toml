@@ -10,7 +10,7 @@ theme = "blowfish"
     weight = 1
 
 [params]
-  colorScheme = "dark"
+  colorScheme = "indigo"
   defaultAppearance = "dark"
   showSummary = true
   showTableOfContents = true
@@ -31,7 +31,7 @@ theme = "blowfish"
 
   [params.author]
     name = "Yadavilli Solutions"
-    headline = "Modernizing Enterprise Intelligence with **Agentic AI**"
+    headline = "The **Agentic AI** Modernization Firm"
     image = "img/hero.png"
 
   [params.social]
