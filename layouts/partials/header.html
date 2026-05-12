@@ -1,0 +1,29 @@
+<header class="site-header" id="site-header">
+  <div class="container">
+    <a href="/" class="logo">
+      <span class="logo-mark">Y</span>
+      <span class="logo-text">Yadavilli <span class="logo-accent">Solutions</span></span>
+    </a>
+    <nav class="nav-desktop">
+      <a href="/" class="{{ if .IsHome }}active{{ end }}">Home</a>
+      <a href="/about/" class="{{ if eq .RelPermalink "/about/" }}active{{ end }}">About</a>
+      <a href="/services/" class="{{ if eq .RelPermalink "/services/" }}active{{ end }}">Services</a>
+      <a href="/products/" class="{{ if eq .RelPermalink "/products/" }}active{{ end }}">Products</a>
+      <a href="/insights/" class="{{ if eq .RelPermalink "/insights/" }}active{{ end }}">Insights</a>
+      <a href="/case-studies/" class="{{ if eq .RelPermalink "/case-studies/" }}active{{ end }}">Case Studies</a>
+    </nav>
+    <a href="/contact/" class="btn-nav">Get Started</a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="nav-mobile" id="nav-mobile">
+    <a href="/">Home</a>
+    <a href="/about/">About</a>
+    <a href="/services/">Services</a>
+    <a href="/products/">Products</a>
+    <a href="/insights/">Insights</a>
+    <a href="/case-studies/">Case Studies</a>
+    <a href="/contact/" class="btn-mobile">Get Started</a>
+  </nav>
+</header>
