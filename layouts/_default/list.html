@@ -1,0 +1,33 @@
+{{ define "main" }}
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero-content fade-up">
+      <h1>{{ .Title }}</h1>
+      {{ with .Description }}<p class="page-subtitle">{{ . }}</p>{{ end }}
+    </div>
+  </div>
+</section>
+
+<section class="page-content">
+  <div class="container">
+    {{ with .Content }}
+    <div class="prose fade-up">{{ . }}</div>
+    {{ end }}
+    {{ if .Pages }}
+    <div class="list-grid">
+      {{ range .Pages }}
+      <article class="list-card fade-up">
+        {{ with .Params.thumbnail }}<img src="{{ . }}" alt="{{ $.Title }}" loading="lazy">{{ end }}
+        <div class="list-card-content">
+          <div class="section-tag">{{ $.Title }}</div>
+          <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+          {{ with .Description }}<p>{{ . }}</p>{{ end }}
+          <a href="{{ .RelPermalink }}" class="method-link">Read more →</a>
+        </div>
+      </article>
+      {{ end }}
+    </div>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
