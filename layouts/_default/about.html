@@ -1,0 +1,85 @@
+{{ define "main" }}
+<section class="page-hero page-hero-glow">
+  <div class="hero-bg">
+    <div class="hero-glow hero-glow-1"></div>
+    <div class="hero-glow hero-glow-2"></div>
+  </div>
+  <div class="container">
+    <div class="page-hero-content fade-up">
+      <div class="section-tag">About Us</div>
+      <h1>{{ .Title }}</h1>
+      {{ with .Description }}<p class="page-subtitle">{{ . }}</p>{{ end }}
+    </div>
+  </div>
+</section>
+
+<section class="about-vision">
+  <div class="container">
+    <div class="about-vision-grid fade-up">
+      <div class="about-vision-content">
+        <h2>Who We Are</h2>
+        <p>Yadavilli Solutions is an AI firm that bridges the gap between enterprise ambition and AI reality. We combine <strong>strategic advisory</strong>, <strong>licensable AI products</strong>, and <strong>dedicated AI Squads</strong> to help organizations move from experimentation to production.</p>
+      </div>
+      <div class="about-vision-content">
+        <h2>Our Vision</h2>
+        <p>The enterprises that win in the next decade won't just <em>use</em> AI — they'll be <em>built on</em> AI. We exist to make that transition practical, measurable, and sustainable. No hype cycles. No shelfware pilots. Just AI that ships.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about-pillars">
+  <div class="container">
+    <div class="section-header fade-up">
+      <div class="section-tag">Why We're Different</div>
+      <h2>Our <span class="gradient-text">Differentiators</span></h2>
+    </div>
+    <div class="pillars-grid">
+      <div class="pillar-card fade-up">
+        <div class="pillar-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        </div>
+        <h3>Products + Services</h3>
+        <p>We're not just consultants who leave behind slide decks. Our product suite — <strong>BenchMark</strong>, <strong>DeepDive</strong>, and <strong>KnowHow</strong> — gives you lasting, licensable tools with dedicated engineering and support.</p>
+      </div>
+      <div class="pillar-card fade-up">
+        <div class="pillar-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3>AI Squads</h3>
+        <p>Dedicated cross-functional teams — AI Agents + FDE + Support × 2 — that embed with your organization and ship production AI from day one.</p>
+      </div>
+      <div class="pillar-card fade-up">
+        <div class="pillar-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+        </div>
+        <h3>Applied, Not Theoretical</h3>
+        <p>We specialize in putting AI into production workflows — Product Development, QA, DevOps, Operations — not building demos that never ship.</p>
+      </div>
+      <div class="pillar-card fade-up">
+        <div class="pillar-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+        </div>
+        <h3>Calibrate · Decode · Activate</h3>
+        <p>Our three-phase intelligence pipeline takes you from measurement to knowledge extraction to operational excellence. No big-bang transformations.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-card fade-up">
+      <div class="cta-glow"></div>
+      <div class="section-tag">Let's Work Together</div>
+      <h2>Ready to Transform with AI?</h2>
+      <p>Whether you need advisory, squads, or products — let's find the right path.</p>
+      <div class="cta-actions">
+        <a href="/contact/" class="btn-primary btn-lg">Get in Touch</a>
+        <a href="/services/" class="btn-ghost">Our Services</a>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}

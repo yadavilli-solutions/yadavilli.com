@@ -1,17 +1,20 @@
 ---
 title: "About Yadavilli Solutions"
-description: "Pioneering the transition to Agentic Enterprise Intelligence."
+description: "AI advisory, products, and squads that transform how enterprises build and operate."
+layout: "about"
 ---
 
-Yadavilli Solutions is a strategic AI consulting firm dedicated to helping enterprises transform their technical debt into competitive advantages. We bridge the gap between legacy infrastructure and the future of **Agentic AI**.
+## Who We Are
+
+Yadavilli Solutions is an AI firm that bridges the gap between enterprise ambition and AI reality. We combine **strategic advisory**, **licensable AI products**, and **dedicated AI Squads** to help organizations move from experimentation to production — quickly and with confidence.
 
 ## Our Vision
 
-We believe the next generation of business will be built on intelligent, reasoning agents that work alongside human experts. Our mission is to provide the tools, talent, and strategies needed to make this vision a reality.
+The enterprises that win in the next decade won't just *use* AI — they'll be *built on* AI. We exist to make that transition practical, measurable, and sustainable. No hype cycles. No shelfware pilots. Just AI that ships.
 
-## Why We Are Different
+## Why We're Different
 
-- **Modernization First**: We don't just layer AI on top of broken systems. We use our proprietary **[Benchmark](/products/benchmark)** platform to rationalize and modernize your core architecture first.
-- **Agentic Excellence**: We are pioneers in the transition from rigid RPA to dynamic, reasoning AI agents.
-- **Managed Success**: Through offerings like **PAaaS** and **AI Shoring**, we provide the ongoing support needed to ensure your AI initiatives scale and succeed.
-- **Responsible Innovation**: With a deep focus on **AI Governance** and **FinOps**, we ensure your AI transformation is ethical, compliant, and cost-effective.
+- **Products + Services**: We're not just consultants who leave behind slide decks. Our product suite — **BenchMark**, **DeepDive**, and **KnowHow** — gives you lasting, licensable tools with dedicated engineering and support built in.
+- **AI Squads**: Need hands-on AI talent embedded in your team? Our AI Squads (AI Agents + FDE + Support × 2) integrate with your existing teams to accelerate delivery from day one.
+- **Applied AI, Not Theoretical**: We specialize in putting AI into production workflows — Product Development, QA, DevOps, Operations — not building demos.
+- **Calibrate · Decode · Activate**: Our three-phase intelligence pipeline takes you from measurement to knowledge extraction to operational excellence. No big-bang transformations.

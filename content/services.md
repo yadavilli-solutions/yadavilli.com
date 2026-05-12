@@ -1,34 +1,25 @@
 ---
 title: "Our Services"
-description: "Specialized AI consulting for legacy modernization, agentic automation, and enterprise enablement."
+description: "Strategic AI advisory, dedicated squads, consulting, and hands-on AI enablement for enterprises."
+layout: "services"
 ---
 
-Yadavilli Solutions provides a comprehensive suite of AI-driven services designed to rationalize your application portfolio and modernize your business processes.
+## AI Advisory
 
-## Legacy Modernization & App Rationalization
+Strategic AI guidance for enterprise leadership. We help executive teams navigate the rapidly evolving AI landscape — defining strategy, evaluating technologies, and building the organizational muscle to succeed with AI. Our advisory engagements deliver actionable roadmaps grounded in your business reality, not theoretical frameworks.
 
-We help you navigate the complexity of aging infrastructure. Using our proprietary **[Benchmark](/products/benchmark)** platform, we analyze your legacy codebase to identify candidates for modernization, rationalization, or retirement, ensuring your technical debt doesn't hinder your future growth.
+## Training & Enablement
 
-## RPA to Agentic AI
+Empower your workforce for the AI era. We deliver hands-on training programs calibrated to your team's level — from executive AI literacy workshops to deep-dive engineering sessions on prompt design, agent architecture, and AI-native development practices. Every program is tailored to your tech stack and business context.
 
-Transition from rigid Robotic Process Automation (RPA) to dynamic, Agentic AI. We replace brittle scripts with intelligent agents that can reason, adapt, and handle exceptions, delivering a more robust and scalable automation layer.
+## AI Squads
 
-## Process Automation as a Service (PAaaS)
+Dedicated, embedded teams that ship production AI. Each **AI Squad** is a cross-functional unit combining **AI Agents**, a **Full-stack Development Engineer (FDE)**, and **Support × 2** — designed to integrate with your existing teams and accelerate delivery from day one. Think of it as elite AI talent, delivered as a managed service.
 
-Leverage our scalable process automation platform. We provide end-to-end management of your automated workflows, allowing you to focus on core business outcomes while we ensure your AI agents are performing at peak efficiency.
+## AI Consulting
 
-## AI Shoring: AI Pods as a Service
+End-to-end AI strategy and implementation consulting. From discovery workshops and feasibility assessments to architecture design, build-out, and production deployment — we partner with your team through the entire lifecycle. We specialize in helping enterprises move from pilot to production without the typical stalls.
 
-Modernize your talent strategy with **AI Shoring**. We provide dedicated **AI Pods**—elite, cross-functional teams of AI engineers, data scientists, and prompt architects—delivered as a managed service. Our pods integrate seamlessly with your existing teams to accelerate AI development, deployment, and scaling without the overhead of traditional hiring.
+## Applied AI Consulting
 
-## AI Enablement & Training
-
-Empower your workforce for the AI era. We provide tailored training programs and strategic enablement frameworks to ensure your team can effectively leverage AI tools and integrate them into their daily workflows.
-
-## AI Governance & Risk Management
-
-Establish a secure, ethical, and compliant AI foundation. We help you implement robust governance frameworks, automated audit trails, and risk mitigation strategies to ensure your AI initiatives are transparent and trustworthy.
-
-## FinOps for AI
-
-Optimize your AI investments with **FinOps for AI**. We provide the visibility and control needed to manage LLM token costs, infrastructure expenses, and resource allocation, ensuring your AI initiatives deliver maximum ROI without runaway costs.
+Hands-on AI integration into your existing workflows. We bring AI capabilities directly into **Product Development**, **QA**, **DevOps**, and **operational processes** — not as a bolt-on, but as a fundamental enhancement. Whether it's AI-assisted code review, intelligent test generation, or automated operational workflows, we make AI practical and productive.

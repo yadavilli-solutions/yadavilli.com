@@ -1,11 +1,6 @@
 ---
 title: "Our Products"
-description: "Innovative AI tools and accelerators to fast-track your intelligent transformation."
+description: "Licensable AI platforms — each includes FDE + Support — that power every stage of your transformation."
 ---
 
-Explore our suite of proprietary AI products designed to streamline development and ensure performance.
-
-## Featured Product
-
-### [Benchmark](/products/benchmark)
-The industry standard for AI model performance evaluation and optimization.
+Our product suite is built for enterprises that need more than consulting — they need tools that scale. Each product is licensable and comes with a dedicated Full-stack Development Engineer (FDE) and Support team to ensure successful deployment and ongoing operation.

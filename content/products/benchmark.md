@@ -1,27 +1,25 @@
 ---
-title: "Benchmark"
-description: "A spec-driven AI benchmarking platform for Legacy Modernization and App Rationalization."
+title: "BenchMark"
+description: "Benchmark your tech stack, evaluate AI models, and create the infrastructure foundation for AI transformation."
 date: 2026-05-11
+tag: "Assessment & Infrastructure"
 ---
 
-## The Intelligence Engine for Legacy Modernization
+## The Starting Point for Every AI Initiative
 
-**Benchmark** is a powerful, spec-driven platform designed to accelerate **Legacy Modernization** and **App Rationalization** initiatives. It provides the deep insights needed to transform complex, aging codebases into modern, agent-ready architectures.
+**BenchMark** is the foundation of our product suite. Before you can transform, you need to understand exactly where you stand. BenchMark provides a rigorous, data-driven assessment of your technology landscape and AI readiness.
 
-### Accelerating App Rationalization
+### What BenchMark Does
 
-Benchmark analyzes your entire application portfolio to identify:
-- **Redundancies**: Discover overlapping capabilities across different legacy systems.
-- **Modernization Candidates**: Pinpoint which applications are best suited for AI-driven refactoring.
-- **Retirement Strategies**: Identify technical debt that should be retired rather than migrated.
+- **Tech Stack Assessment**: Comprehensive analysis of your current technology stack — languages, frameworks, infrastructure, data pipelines — scored against AI-readiness criteria.
+- **Model Benchmarking**: Evaluate how different AI models perform against your specific use cases, data characteristics, and compliance requirements. No generic benchmarks — tests are tailored to your workloads.
+- **Infrastructure Blueprint**: Generate a concrete infrastructure plan for your AI initiatives, including compute requirements, deployment architecture, and integration points with existing systems.
+- **AI-Readiness Scoring**: A clear, quantified scorecard that tells leadership exactly where the organization stands and what needs to happen next.
 
-### Core Capabilities
+### How It Fits the Pipeline
 
-- **Spec-Driven Analysis**: Define modernization goals and artifact roots using declarative `GymSpec` YAML files.
-- **Multi-Model Certification**: Evaluate how different AI models handle your specific legacy code (COBOL, Java, C++, etc.).
-- **Scoring Provenance**: Gain full transparency into model performance across dimensions like functional accuracy, hallucination risk, and traceability.
-- **Modernization Labs**: Pre-configured environments for business rule extraction, data lineage tracing, and regression test generation.
+BenchMark is the **Calibrate** phase of our **Calibrate · Decode · Activate** framework. Once your landscape is benchmarked, the insights feed directly into **[DeepDive](/products/deepdive/)** for knowledge extraction, and ultimately into **[KnowHow](/products/knowhow/)** for operational runbook generation.
 
-### From Legacy to Agentic
+### Licensing
 
-Benchmark doesn't just analyze code; it prepares it for the future. By extracting clean, documented business rules and logic, it provides the foundation for building **Agentic AI** systems that can interact with your core business data.
+BenchMark is licensed per engagement and includes a dedicated **Full-stack Development Engineer (FDE)** and **Support team** to ensure smooth deployment, calibration, and knowledge transfer.
