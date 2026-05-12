@@ -1,9 +1,10 @@
 ---
 title: "Contact Us"
 description: "Get in touch to start your AI transformation journey."
+tag: "Let's Talk"
 ---
 
-Ready to elevate your business with AI? Contact us today for a consultation.
+Ready to elevate your business with AI? Let's start a conversation.
 
 ## Get in Touch
 
@@ -11,7 +12,6 @@ Ready to elevate your business with AI? Contact us today for a consultation.
 - **LinkedIn**: [Yadavilli Solutions](https://linkedin.com/company/yadavilli)
 - **Twitter**: [@YadavilliAI](https://twitter.com/YadavilliAI)
 
-## Our Office
+## Book a Free Assessment
 
-123 Innovation Drive,  
-Tech City, TC 12345
+We'll map your legacy landscape and deliver a transformation roadmap in 2 weeks — at no cost.
