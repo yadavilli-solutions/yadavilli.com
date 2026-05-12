@@ -1063,6 +1063,237 @@ p { color: var(--text-2); }
 }
 
 /* ============================================================
+   PAGE HERO GLOW (inner pages with ambient glow)
+   ============================================================ */
+
+.page-hero-glow {
+  position: relative;
+  overflow: hidden;
+}
+
+.page-hero-glow .hero-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+/* ============================================================
+   SERVICES DETAIL PAGE
+   ============================================================ */
+
+.services-detail-section {
+  padding: 5rem 0 3rem;
+}
+
+.services-detail-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.service-detail-card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 2rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  transition: all 0.3s ease;
+}
+
+.service-detail-card:hover {
+  border-color: var(--border-hover);
+  background: var(--bg-card-hover);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-glow);
+}
+
+.service-detail-icon {
+  width: 64px;
+  height: 64px;
+  background: var(--cyan-dim);
+  border: 1px solid rgba(6,182,212,0.2);
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--cyan);
+  flex-shrink: 0;
+}
+
+.service-detail-content h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.service-detail-content > p {
+  font-size: 1rem;
+  color: var(--text-2);
+  margin-bottom: 1.25rem;
+  line-height: 1.7;
+}
+
+.service-features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.service-features li {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.875rem;
+  color: var(--text-2);
+  padding: 0.35rem 0;
+}
+
+.service-features li::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: var(--cyan);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* ============================================================
+   CONTACT PAGE
+   ============================================================ */
+
+.contact-section {
+  padding: 5rem 0 3rem;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.contact-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(8px);
+}
+
+.contact-card:hover {
+  border-color: var(--border-hover);
+  background: var(--bg-card-hover);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-glow);
+}
+
+.contact-card-icon {
+  width: 60px;
+  height: 60px;
+  background: var(--cyan-dim);
+  border: 1px solid rgba(6,182,212,0.2);
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.25rem;
+  color: var(--cyan);
+}
+
+.contact-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact-card p {
+  font-size: 0.95rem;
+  color: var(--text-2);
+  margin-bottom: 1rem;
+}
+
+/* ============================================================
+   ABOUT PAGE
+   ============================================================ */
+
+.about-vision {
+  padding: 5rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.about-vision-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.about-vision-content h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.about-vision-content p {
+  font-size: 1.05rem;
+  color: var(--text-2);
+  line-height: 1.8;
+}
+
+.about-vision-content strong { color: var(--text); }
+.about-vision-content em { color: var(--cyan); font-style: normal; }
+
+.about-pillars {
+  padding: 7rem 0;
+}
+
+.pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.pillar-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  transition: all 0.3s ease;
+}
+
+.pillar-card:hover {
+  border-color: var(--border-hover);
+  background: var(--bg-card-hover);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-glow);
+}
+
+.pillar-icon {
+  width: 56px;
+  height: 56px;
+  background: var(--cyan-dim);
+  border: 1px solid rgba(6,182,212,0.2);
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  color: var(--cyan);
+}
+
+.pillar-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.pillar-card p {
+  font-size: 0.9rem;
+  color: var(--text-2);
+  line-height: 1.7;
+}
+
+.pillar-card strong { color: var(--text); }
+
+/* ============================================================
    ANIMATIONS
    ============================================================ */
 
@@ -1093,6 +1324,8 @@ p { color: var(--text-2); }
   .product-card-featured { grid-column: 1 / -1; }
 
   .footer-grid { grid-template-columns: 1fr 1fr; }
+
+  .about-vision-grid { grid-template-columns: 1fr; gap: 2rem; }
 }
 
 @media (max-width: 768px) {
@@ -1126,6 +1359,13 @@ p { color: var(--text-2); }
   .footer-bottom { flex-direction: column; gap: 0.5rem; text-align: center; }
 
   .hero-content { padding: 4rem 1.5rem; }
+
+  .service-detail-card { grid-template-columns: 1fr; gap: 1rem; }
+  .service-features { grid-template-columns: 1fr; }
+
+  .contact-grid { grid-template-columns: 1fr; }
+
+  .pillars-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 480px) {

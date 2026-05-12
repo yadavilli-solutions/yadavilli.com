@@ -6,4 +6,4 @@ cascade:
   showAuthor: true
 ---
 
-Stay ahead of the curve with our latest articles and deep dives into AI technology and strategy.
+Stay ahead of the curve with our latest articles and deep dives into AI technology and strategy. For more frequent analysis, subscribe to our [Analytics Musings Substack](https://analyticsmusings.substack.com).

@@ -1,5 +1,8 @@
 {{ define "main" }}
-<section class="page-hero">
+<section class="page-hero page-hero-glow">
+  <div class="hero-bg">
+    <div class="hero-glow hero-glow-1"></div>
+  </div>
   <div class="container">
     <div class="page-hero-content fade-up">
       <h1>{{ .Title }}</h1>
@@ -19,7 +22,7 @@
       <article class="list-card fade-up">
         {{ with .Params.thumbnail }}<img src="{{ . }}" alt="{{ $.Title }}" loading="lazy">{{ end }}
         <div class="list-card-content">
-          <div class="section-tag">{{ $.Title }}</div>
+          {{ with .Params.tag }}<div class="section-tag">{{ . }}</div>{{ else }}<div class="section-tag">{{ $.Title }}</div>{{ end }}
           <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
           {{ with .Description }}<p>{{ . }}</p>{{ end }}
           <a href="{{ .RelPermalink }}" class="method-link">Read more →</a>
@@ -28,6 +31,22 @@
       {{ end }}
     </div>
     {{ end }}
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-card fade-up">
+      <div class="cta-glow"></div>
+      <div class="section-tag">Ready to Transform?</div>
+      <h2>Start Your AI Journey</h2>
+      <p>Book a free assessment and get a clear transformation roadmap in 2 weeks.</p>
+      <div class="cta-actions">
+        <a href="/contact/" class="btn-primary btn-lg">Book a Free Assessment</a>
+        <a href="/services/" class="btn-ghost">Explore Services</a>
+      </div>
+    </div>
   </div>
 </section>
 {{ end }}
