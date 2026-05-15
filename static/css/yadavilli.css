@@ -65,7 +65,7 @@ h1, h2, h3, h4 {
 
 h1 { font-size: clamp(3rem, 7vw, 5.5rem); letter-spacing: -0.035em; }
 h2 { font-size: clamp(2rem, 4vw, 3rem); letter-spacing: -0.025em; }
-h3 { font-size: clamp(1.2rem, 2.5vw, 1.65rem); }
+h3 { font-size: clamp(1.2rem, 2.5vw, 1.65rem); letter-spacing: -0.015em; }
 
 p { color: var(--text-2); }
 
@@ -165,7 +165,7 @@ p { color: var(--text-2); }
   padding: 0.8rem 1.75rem;
   border-radius: 100px;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all var(--transition);
   white-space: nowrap;
 }
 .btn-glass:hover {
@@ -1415,16 +1415,6 @@ p { color: var(--text-2); }
   transform: translateY(0);
 }
 
-.reveal {
-  opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.65s ease, transform 0.65s ease;
-}
-.reveal.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
 .scroll-hint {
   position: absolute;
   bottom: 32px;
@@ -1467,6 +1457,20 @@ p { color: var(--text-2); }
   flex: 1;
   height: 1px;
   background: linear-gradient(to right, rgba(6,182,212,.4), transparent);
+}
+
+/* ============================================================
+   ACCESSIBILITY: REDUCED MOTION
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-bg { animation: none; }
+  .scroll-hint { animation: none; }
+  .fade-up {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
 
 /* ============================================================
