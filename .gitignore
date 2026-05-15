@@ -1,7 +1,9 @@
 public/
 resources/
+resources/_gen/
 .hugo_build.lock
 .DS_Store
+.superpowers/
 
 # wrangler files
 .wrangler
