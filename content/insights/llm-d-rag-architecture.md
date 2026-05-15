@@ -303,7 +303,7 @@ They're not doing anything wrong. They're running an architecture that was desig
 
 The architect stack isn't complicated for its own sake. Every layer exists because production workloads exposed a failure mode that the simple path couldn't handle.
 
-**LLM-D** sits at layer three — not as a dumb load balancer, but as an intelligent gateway that makes routing decisions based on request type before a single token is generated. It knows whether a request should go to a heavyweight reasoning model, a lighter inference endpoint, or skip the LLM layer entirely for tool execution. That decision alone drives most of the cost and latency delta.
+**LLM-D** sits at layer three — not as a dumb load balancer, but as an intelligent inference gateway that routes requests to the optimal backend based on load, model affinity, and KV cache state. It decides whether a request goes to a heavyweight GPU pod, a lighter inference endpoint, or Bedrock-managed inference — without the application needing to know which backend handles it. That backend-routing intelligence alone improves throughput and reduces cold-path latency significantly.
 
 The **RAG Orchestrator** on EKS is where the branching logic lives. It reads the incoming request and makes a call: does this need retrieval? Can it go direct to the LLM? Is this a tool-use or function-calling request that should bypass inference altogether? Getting this wrong in either direction is expensive — unnecessary retrieval adds latency; skipping retrieval on knowledge-heavy queries produces hallucination.
 
