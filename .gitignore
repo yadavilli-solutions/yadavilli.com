@@ -12,3 +12,4 @@ resources/_gen/
 .env*
 !.env.example
 node_modules/
+.claude/
