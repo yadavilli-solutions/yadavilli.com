@@ -1,17 +1,17 @@
 ---
 title: "The Architecture Gap: What AWS Recommends vs What Production RAG Actually Requires"
 date: 2026-05-14
-description: "Most enterprises follow AWS's getting-started docs and point everything at Bedrock. Here's why that's costing them — and what production RAG actually requires."
+description: "Most enterprises follow AWS's getting-started docs and point everything at Bedrock. Here's why that's costing them - and what production RAG actually requires."
 tag: "Architecture"
 ---
 
 ## The Copy-Cat Problem
 
-AWS documentation is excellent for getting started. The problem is that "getting started" and "production-ready" are different destinations — and the path between them isn't a config option.
+AWS documentation is excellent for getting started. The problem is that "getting started" and "production-ready" are different destinations - and the path between them isn't a config option.
 
 Most enterprises that come to us have followed the path of least resistance: API Gateway → Bedrock. It works. It ships. It demos beautifully. Then the bills arrive, the latency climbs, and the team realizes they have zero visibility into what's actually happening between the request and the response.
 
-They're not doing anything wrong. They're running an architecture that was designed for proofs of concept, not production workloads. The gap is real, it compounds at scale, and the good news is it's well-understood — if you know what to look for.
+They're not doing anything wrong. They're running an architecture that was designed for proofs of concept, not production workloads. The gap is real, it compounds at scale, and the good news is it's well-understood - if you know what to look for.
 
 <div class="diagram-embed">
 <style>
@@ -163,7 +163,7 @@ They're not doing anything wrong. They're running an architecture that was desig
 
 <!-- BEFORE -->
 <div class="before">
-  <span class="section-pill pill-bad">The Copy-Cat Stack — point everything at Bedrock</span>
+  <span class="section-pill pill-bad">The Copy-Cat Stack - point everything at Bedrock</span>
   <div class="cc-row">
     <div class="cc-box"><div class="t">Client</div><div class="s">Web · APIs · Agents</div></div>
     <div class="cc-arr">→</div>
@@ -173,14 +173,14 @@ They're not doing anything wrong. They're running an architecture that was desig
     <div class="cc-arr">→</div>
     <div class="cc-box"><div class="t">Response</div><div class="s">Hopefully correct</div></div>
   </div>
-  <div class="cc-note">Simple query, complex reasoning, or knowledge retrieval — everything bills at your largest model's rate with zero routing intelligence, no retrieval, and a single point of latency.</div>
+  <div class="cc-note">Simple query, complex reasoning, or knowledge retrieval - everything bills at your largest model's rate with zero routing intelligence, no retrieval, and a single point of latency.</div>
 </div>
 
 <div class="vs"><div class="vs-line"></div><div class="vs-badge">vs the architect path</div><div class="vs-line"></div></div>
 
 <!-- AFTER -->
 <div class="after">
-  <span class="section-pill pill-good">The Architect Stack — LLM-D + vLLM on EKS</span>
+  <span class="section-pill pill-good">The Architect Stack - LLM-D + vLLM on EKS</span>
 
   <!-- Top row: 1–4 -->
   <div class="row">
@@ -200,7 +200,7 @@ They're not doing anything wrong. They're running an architecture that was desig
       <div class="n">3 · LLM-D Gateway</div>
       <div class="t">Intelligent Routing</div>
       <div class="s">Request routing · Load balancing · Policy enforcement · Rate limits</div>
-      <div class="ann">LLM-D decides routing, not just load balancing — routes to optimal backend based on request type</div>
+      <div class="ann">LLM-D decides routing, not just load balancing - routes to optimal backend based on request type</div>
     </div>
     <div class="step-arr">→</div>
     <div class="step s4">
@@ -224,7 +224,7 @@ They're not doing anything wrong. They're running an architecture that was desig
     </div>
     <div class="step b5b">
       <div class="n">5b · Direct LLM Path</div>
-      <div class="t">Simple Queries — Skip Retrieval</div>
+      <div class="t">Simple Queries - Skip Retrieval</div>
       <div class="s">Cheaper · Faster · Right-sized for low-complexity requests</div>
       <div class="ann">Bigger context ≠ better answers. Context size ↑ → latency ↑ and cost ↑</div>
     </div>
@@ -245,7 +245,7 @@ They're not doing anything wrong. They're running an architecture that was desig
       <div class="n">6 · Context Assembly</div>
       <div class="t">Retrieved Chunks · Prompt Construction</div>
       <div class="s">Token expansion · Reranking · Context optimization</div>
-      <div class="ann">Context size ↑ = latency ↑ and cost ↑ — managed here</div>
+      <div class="ann">Context size ↑ = latency ↑ and cost ↑ - managed here</div>
     </div>
     <div class="step-arr">→</div>
     <div class="step s7">
@@ -269,7 +269,7 @@ They're not doing anything wrong. They're running an architecture that was desig
   <div class="gc">
     <div class="gc-label">Cost</div>
     <div class="gc-bad">Premium rate, every call</div>
-    <div class="gc-good">Right model per complexity — 60–70% savings</div>
+    <div class="gc-good">Right model per complexity - 60–70% savings</div>
   </div>
   <div class="gc">
     <div class="gc-label">Knowledge</div>
@@ -288,13 +288,13 @@ They're not doing anything wrong. They're running an architecture that was desig
   </div>
   <div class="gc">
     <div class="gc-label">Control</div>
-    <div class="gc-bad">Black box — no observability per layer</div>
+    <div class="gc-bad">Black box - no observability per layer</div>
     <div class="gc-good">Observable, tunable, and measurable end-to-end</div>
   </div>
 </div>
 
 <div class="insight">
-  <p><strong>RAG on AWS = Orchestration + Retrieval + Inference.</strong> RAG is a systems problem, not a prompt problem. The gap isn't a config option — it's systems knowledge. AWS docs describe the components. An architect knows how to wire them for your load, your data, and your cost targets.</p>
+  <p><strong>RAG on AWS = Orchestration + Retrieval + Inference.</strong> RAG is a systems problem, not a prompt problem. The gap isn't a config option - it's systems knowledge. AWS docs describe the components. An architect knows how to wire them for your load, your data, and your cost targets.</p>
 </div>
 
 </div>
@@ -303,13 +303,13 @@ They're not doing anything wrong. They're running an architecture that was desig
 
 The architect stack isn't complicated for its own sake. Every layer exists because production workloads exposed a failure mode that the simple path couldn't handle.
 
-**LLM-D** sits at layer three — not as a dumb load balancer, but as an intelligent inference gateway that routes requests to the optimal backend based on load, model affinity, and KV cache state. It decides whether a request goes to a heavyweight GPU pod, a lighter inference endpoint, or Bedrock-managed inference — without the application needing to know which backend handles it. That backend-routing intelligence alone improves throughput and reduces cold-path latency significantly.
+**LLM-D** sits at layer three - not as a dumb load balancer, but as an intelligent inference gateway that routes requests to the optimal backend based on load, model affinity, and KV cache state. It decides whether a request goes to a heavyweight GPU pod, a lighter inference endpoint, or Bedrock-managed inference - without the application needing to know which backend handles it. That backend-routing intelligence alone improves throughput and reduces cold-path latency significantly.
 
-The **RAG Orchestrator** on EKS is where the branching logic lives. It reads the incoming request and makes a call: does this need retrieval? Can it go direct to the LLM? Is this a tool-use or function-calling request that should bypass inference altogether? Getting this wrong in either direction is expensive — unnecessary retrieval adds latency; skipping retrieval on knowledge-heavy queries produces hallucination.
+The **RAG Orchestrator** on EKS is where the branching logic lives. It reads the incoming request and makes a call: does this need retrieval? Can it go direct to the LLM? Is this a tool-use or function-calling request that should bypass inference altogether? Getting this wrong in either direction is expensive - unnecessary retrieval adds latency; skipping retrieval on knowledge-heavy queries produces hallucination.
 
-The retrieval path hits **Qdrant** for vector similarity search against your document corpus in S3. Retrieval latency frequently dominates total response time — which means your embedding model choice, index configuration, and top-K selection aren't academic decisions.
+The retrieval path hits **Qdrant** for vector similarity search against your document corpus in S3. Retrieval latency frequently dominates total response time - which means your embedding model choice, index configuration, and top-K selection aren't academic decisions.
 
-Context assembly at layer six is where retrieved chunks get ranked, trimmed, and assembled into the final prompt. Bigger context is not better. Every token you add to the context window increases both inference cost and latency — linearly on cost, nonlinearly on attention. Reranking and context optimization here pay for themselves immediately.
+Context assembly at layer six is where retrieved chunks get ranked, trimmed, and assembled into the final prompt. Bigger context is not better. Every token you add to the context window increases both inference cost and latency - linearly on cost, nonlinearly on attention. Reranking and context optimization here pay for themselves immediately.
 
 **vLLM** at layer seven handles inference on EKS GPU nodes with **continuous batching** and a **KV cache** that dramatically improves throughput under concurrent load. LLM-D routes to Bedrock for managed inference when appropriate. The hybrid model gives you cost control, GPU flexibility, and the option to run open-weight models where proprietary ones aren't warranted.
 
@@ -319,15 +319,15 @@ Layer eight closes the loop: streaming responses, token-level metrics, and end-t
 
 The Bedrock-only pattern bills every request at your largest model's rate. A simple FAQ lookup, a complex multi-hop reasoning chain, and a retrieval-augmented response with fifty retrieved chunks all hit the same meter.
 
-The architect stack disaggregates this. Simple queries route to smaller, cheaper models and skip retrieval entirely — the inference cost drops to a fraction. Retrieval-augmented queries use context assembly to keep prompt size controlled, which directly reduces token count. GPU-batched inference on vLLM means concurrent requests don't each pay full cold-start cost.
+The architect stack disaggregates this. Simple queries route to smaller, cheaper models and skip retrieval entirely - the inference cost drops to a fraction. Retrieval-augmented queries use context assembly to keep prompt size controlled, which directly reduces token count. GPU-batched inference on vLLM means concurrent requests don't each pay full cold-start cost.
 
-The result is 60–70% reduction in inference spend on typical enterprise workloads — without any compromise on output quality for complex tasks. The savings come from routing intelligence, not model downgrading.
+The result is 60–70% reduction in inference spend on typical enterprise workloads - without any compromise on output quality for complex tasks. The savings come from routing intelligence, not model downgrading.
 
 None of this happens automatically. It requires knowing where to cut, what to route where, and how to instrument the system to verify the decisions are working.
 
 ## RAG Is a Systems Problem
 
-AWS provides excellent building blocks. Bedrock, EKS, API Gateway, S3 — these are the right components for a production RAG stack. The architecture gap isn't a missing AWS service.
+AWS provides excellent building blocks. Bedrock, EKS, API Gateway, S3 - these are the right components for a production RAG stack. The architecture gap isn't a missing AWS service.
 
 The gap is the **orchestration layer**: the logic that decides which component handles which request, how retrieval integrates with inference, how context is assembled and sized, and how the whole system is observed end-to-end. AWS documentation describes what each service does. It doesn't tell you how to wire them together for your load profile, your latency targets, and your cost constraints.
 
