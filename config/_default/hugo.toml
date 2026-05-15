@@ -1,6 +1,10 @@
 baseURL = "https://yadavillidotcom.yakarteek.workers.dev/"
 languageCode = "en-us"
 title = "Yadavilli Solutions | AI Consulting"
+enableRobotsTXT = true
+
+[markup.goldmark.renderer]
+  unsafe = true
 
 [params]
   description = "The Agentic AI modernization firm for enterprise transformation."
