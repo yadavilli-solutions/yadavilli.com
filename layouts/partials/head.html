@@ -9,12 +9,24 @@
 <meta property="og:type" content="{{ if .IsHome }}website{{ else }}article{{ end }}">
 <meta property="og:url" content="{{ .Permalink }}">
 <meta property="og:site_name" content="{{ .Site.Title }}">
+<meta property="og:image" content="{{ .Site.BaseURL }}img/og-default.png">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
 <meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
 <meta name="twitter:site" content="@YadavilliAI">
+<meta name="twitter:image" content="{{ .Site.BaseURL }}img/og-default.png">
+
+<!-- JSON-LD -->
+{{ if .IsHome }}
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Yadavilli Solutions","url":"{{ .Site.BaseURL }}","description":"{{ .Site.Params.description }}","sameAs":[]}</script>
+{{ end }}
+{{ if not .IsHome }}
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"{{ .Title }}","datePublished":"{{ .Date.Format "2006-01-02" }}","dateModified":"{{ .Lastmod.Format "2006-01-02" }}","author":{"@type":"Organization","name":"Yadavilli Solutions","url":"{{ .Site.BaseURL }}"},"publisher":{"@type":"Organization","name":"Yadavilli Solutions"},"description":"{{ .Description | default (.Summary | plainify) }}"}
+</script>
+{{ end }}
 
 <!-- Styles & Fonts -->
 <link rel="stylesheet" href="/css/yadavilli.css">
