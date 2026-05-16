@@ -1,0 +1,110 @@
+#!/usr/bin/env python3
+"""Post new Insights articles to Substack as drafts.
+
+Detects newly added content/insights/*.md files in the last commit and
+creates a draft in Substack for each one. Requires SUBSTACK_SESSION_COOKIE
+set as an environment variable (GitHub Actions secret).
+"""
+
+import os
+import sys
+import subprocess
+import requests
+import re
+
+try:
+    import frontmatter
+except ImportError:
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "python-frontmatter", "-q"])
+    import frontmatter
+
+try:
+    import markdown as md_lib
+except ImportError:
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "markdown", "-q"])
+    import markdown as md_lib
+
+SUBSTACK_URL = "https://analyticsmusings.substack.com"
+SESSION_COOKIE = os.environ.get("SUBSTACK_SESSION_COOKIE", "")
+
+
+def get_new_insight_files():
+    """Return insight markdown files added in the last commit."""
+    result = subprocess.run(
+        ["git", "diff", "--name-only", "--diff-filter=A", "HEAD~1", "HEAD"],
+        capture_output=True, text=True
+    )
+    files = result.stdout.strip().split("\n")
+    return [
+        f for f in files
+        if f.startswith("content/insights/")
+        and f.endswith(".md")
+        and "_index" not in f
+    ]
+
+
+def md_to_html(content):
+    """Convert markdown to clean HTML."""
+    # Strip inline HTML blocks (diagram embeds etc) - Substack cant render custom CSS
+    content = re.sub(r'<div class="diagram-embed">.*?</div>', '', content, flags=re.DOTALL)
+    # Convert markdown
+    html = md_lib.markdown(content, extensions=["extra", "nl2br", "sane_lists"])
+    return html
+
+
+def post_to_substack(md_file):
+    post = frontmatter.load(md_file)
+
+    title = post.metadata.get("title", "")
+    subtitle = post.metadata.get("description", "")
+    body_html = md_to_html(post.content)
+
+    headers = {
+        "Cookie": f"substack.sid={SESSION_COOKIE}",
+        "Content-Type": "application/json",
+        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+    }
+
+    payload = {
+        "draft_title": title,
+        "draft_subtitle": subtitle,
+        "draft_body": body_html,
+        "type": "newsletter",
+        "draft_section_id": None,
+        "audience": "everyone",
+    }
+
+    resp = requests.post(
+        f"{SUBSTACK_URL}/api/v1/posts",
+        headers=headers,
+        json=payload,
+        timeout=30,
+    )
+
+    if resp.status_code in (200, 201):
+        data = resp.json()
+        draft_id = data.get("id", "unknown")
+        print(f"Draft created (id={draft_id}): {title}")
+        print(f"  Preview: {SUBSTACK_URL}/publish/post/{draft_id}")
+        return True
+    else:
+        print(f"Failed to post '{title}' ({resp.status_code}): {resp.text[:300]}")
+        return False
+
+
+if __name__ == "__main__":
+    if not SESSION_COOKIE:
+        print("SUBSTACK_SESSION_COOKIE is not set - skipping Substack sync")
+        sys.exit(0)
+
+    # Allow passing specific files as args (for manual runs)
+    files = sys.argv[1:] if len(sys.argv) > 1 else get_new_insight_files()
+
+    if not files:
+        print("No new Insights articles detected in this commit")
+        sys.exit(0)
+
+    print(f"Posting {len(files)} article(s) to Substack...")
+    results = [post_to_substack(f) for f in files]
+    if not all(results):
+        sys.exit(1)
