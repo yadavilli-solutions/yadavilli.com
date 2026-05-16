@@ -9,8 +9,8 @@ set as an environment variable (GitHub Actions secret).
 import os
 import sys
 import subprocess
-import requests
 import re
+from urllib.parse import unquote
 
 try:
     import frontmatter
@@ -23,6 +23,12 @@ try:
 except ImportError:
     subprocess.check_call([sys.executable, "-m", "pip", "install", "markdown", "-q"])
     import markdown as md_lib
+
+try:
+    import requests
+except ImportError:
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "requests", "-q"])
+    import requests
 
 SUBSTACK_URL = "https://analyticsmusings.substack.com"
 SESSION_COOKIE = os.environ.get("SUBSTACK_SESSION_COOKIE", "")
@@ -43,41 +49,48 @@ def get_new_insight_files():
     ]
 
 
+def build_session(cookie_raw):
+    """Build an authenticated requests session."""
+    cookie = unquote(cookie_raw)
+    session = requests.Session()
+    session.cookies.set("substack.sid", cookie, domain="substack.com")
+    session.cookies.set("substack.sid", cookie, domain="analyticsmusings.substack.com")
+    # Sign in to the publication context
+    session.get("https://substack.com/sign-in?redirect=%2F&for_pub=analyticsmusings")
+    return session
+
+
+def get_user_id(session):
+    """Fetch the authenticated user's ID."""
+    profile = session.get("https://substack.com/api/v1/user/profile/self").json()
+    return profile["id"]
+
+
 def md_to_html(content):
     """Convert markdown to clean HTML."""
     # Strip inline HTML blocks (diagram embeds etc) - Substack cant render custom CSS
     content = re.sub(r'<div class="diagram-embed">.*?</div>', '', content, flags=re.DOTALL)
-    # Convert markdown
     html = md_lib.markdown(content, extensions=["extra", "nl2br", "sane_lists"])
     return html
 
 
-def post_to_substack(md_file):
+def post_to_substack(session, user_id, md_file):
     post = frontmatter.load(md_file)
 
     title = post.metadata.get("title", "")
     subtitle = post.metadata.get("description", "")
     body_html = md_to_html(post.content)
 
-    headers = {
-        "Cookie": f"substack.sid={SESSION_COOKIE}",
-        "Content-Type": "application/json",
-        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
-    }
-
-    payload = {
-        "draft_title": title,
-        "draft_subtitle": subtitle,
-        "draft_body": body_html,
-        "type": "newsletter",
-        "draft_section_id": None,
-        "audience": "everyone",
-    }
-
-    resp = requests.post(
-        f"{SUBSTACK_URL}/api/v1/posts",
-        headers=headers,
-        json=payload,
+    resp = session.post(
+        f"{SUBSTACK_URL}/api/v1/drafts",
+        json={
+            "draft_title": title,
+            "draft_subtitle": subtitle,
+            "draft_body": body_html,
+            "type": "newsletter",
+            "audience": "everyone",
+            "draft_bylines": [{"id": user_id, "is_guest": False}],
+        },
         timeout=30,
     )
 
@@ -105,6 +118,10 @@ if __name__ == "__main__":
         sys.exit(0)
 
     print(f"Posting {len(files)} article(s) to Substack...")
-    results = [post_to_substack(f) for f in files]
+
+    session = build_session(SESSION_COOKIE)
+    user_id = get_user_id(session)
+
+    results = [post_to_substack(session, user_id, f) for f in files]
     if not all(results):
         sys.exit(1)
