@@ -13,7 +13,9 @@ Most enterprises that come to us have followed the path of least resistance: API
 
 They're not doing anything wrong. They're running an architecture that was designed for proofs of concept, not production workloads. The gap is real, it compounds at scale, and the good news is it's well-understood - if you know what to look for.
 
-<div class="diagram-embed">
+<img src="https://yadavilli.com/img/diagrams/rag-architecture-comparison.svg" alt="RAG architecture comparison: copy-cat Bedrock stack vs LLM-D architect stack" style="width:100%;max-width:900px;display:block;margin:24px auto;" />
+
+<div class="diagram-embed" style="display:none">
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
