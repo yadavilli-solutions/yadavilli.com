@@ -1,7 +1,7 @@
 ---
 title: "Tools as the Only Interface: How to Make AI Agents Observable by Design"
 date: 2026-05-17
-description: "In Emergence World, every agent action - walking, speaking, stealing, voting, writing - is a tool call. Nothing happens outside of tools. This design choice made 15 days of autonomous behavior fully auditable. Enterprise agentic systems need the same principle."
+description: "Every agent action is a tool call. Nothing happens outside of tools. This design choice made 15 days of autonomous behavior fully auditable. Enterprise agentic systems need the same principle."
 tag: "Architecture"
 ---
 
