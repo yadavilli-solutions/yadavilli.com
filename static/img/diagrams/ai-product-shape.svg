@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 580" width="900" height="580" font-family="Inter, system-ui, sans-serif">
+  <defs>
+    <marker id="aps-green" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#34d399"/>
+    </marker>
+    <marker id="aps-amber" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#fbbf24"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="580" fill="#09090b" rx="12"/>
+
+  <!-- Title -->
+  <text x="480" y="38" fill="#e4e4e7" font-size="15" font-weight="600" text-anchor="middle" letter-spacing="0.4">AI Pattern Shape: Skill Depth × Action Breadth</text>
+
+  <!-- Quadrant fills -->
+  <rect x="141" y="61" width="338" height="198" fill="#052e16" opacity="0.28"/>
+  <rect x="481" y="61" width="338" height="198" fill="#1c1917" opacity="0.45"/>
+  <rect x="141" y="261" width="338" height="198" fill="#1e1b4b" opacity="0.28"/>
+  <rect x="481" y="261" width="338" height="198" fill="#7f1d1d" opacity="0.2"/>
+
+  <!-- Dividing lines -->
+  <line x1="140" y1="260" x2="820" y2="260" stroke="#3f3f46" stroke-width="1.5" stroke-dasharray="8,5"/>
+  <line x1="480" y1="60" x2="480" y2="460" stroke="#3f3f46" stroke-width="1.5" stroke-dasharray="8,5"/>
+
+  <!-- Axes -->
+  <line x1="140" y1="56" x2="140" y2="462" stroke="#52525b" stroke-width="1.5"/>
+  <line x1="138" y1="460" x2="822" y2="460" stroke="#52525b" stroke-width="1.5"/>
+
+  <!-- Axis arrowheads -->
+  <polygon points="140,54 136,64 144,64" fill="#52525b"/>
+  <polygon points="824,460 814,456 814,464" fill="#52525b"/>
+
+  <!-- Axis labels -->
+  <text transform="translate(24,260) rotate(-90)" fill="#a1a1aa" font-size="13" font-weight="500" text-anchor="middle">Skill Depth</text>
+  <text x="480" y="532" fill="#a1a1aa" font-size="13" font-weight="500" text-anchor="middle">Action Breadth  (scope · duration · steps)</text>
+
+  <!-- Low/High labels -->
+  <text x="128" y="464" fill="#52525b" font-size="11" text-anchor="end">Low</text>
+  <text x="128" y="72" fill="#52525b" font-size="11" text-anchor="end">High</text>
+  <text x="148" y="478" fill="#52525b" font-size="11" text-anchor="start">Narrow / Short</text>
+  <text x="812" y="478" fill="#52525b" font-size="11" text-anchor="end">Broad / Long</text>
+
+  <!-- Quadrant name labels -->
+  <text x="310" y="88" fill="#6ee7b7" font-size="13" font-weight="700" text-anchor="middle" opacity="0.65" letter-spacing="2">SPECIALIST</text>
+  <text x="650" y="88" fill="#fbbf24" font-size="13" font-weight="700" text-anchor="middle" opacity="0.65" letter-spacing="2">AGENT</text>
+  <text x="310" y="288" fill="#818cf8" font-size="13" font-weight="700" text-anchor="middle" opacity="0.65" letter-spacing="2">FEATURE</text>
+  <text x="650" y="288" fill="#f87171" font-size="13" font-weight="700" text-anchor="middle" opacity="0.75" letter-spacing="2">NOISE</text>
+
+  <!-- FEATURE chips -->
+  <rect x="162" y="312" width="84" height="32" rx="6" fill="#1e1b4b" stroke="#6366f1" stroke-width="1.2"/>
+  <text x="204" y="332" fill="#a5b4fc" font-size="12" font-weight="600" text-anchor="middle">Copilot</text>
+  <rect x="260" y="312" width="78" height="32" rx="6" fill="#1e1b4b" stroke="#6366f1" stroke-width="1.2"/>
+  <text x="299" y="332" fill="#a5b4fc" font-size="12" font-weight="600" text-anchor="middle">Lookup</text>
+  <text x="310" y="378" fill="#6d6a9c" font-size="11" text-anchor="middle">Bolt-on · User-initiated · Low trust required</text>
+  <text x="310" y="394" fill="#6d6a9c" font-size="11" text-anchor="middle">Fast to ship · Starting point for all products</text>
+  <text x="310" y="440" fill="#4c4b7a" font-size="11" font-weight="600" text-anchor="middle">← Start here</text>
+
+  <!-- SPECIALIST chips -->
+  <rect x="155" y="120" width="78" height="32" rx="6" fill="#052e16" stroke="#10b981" stroke-width="1.2"/>
+  <text x="194" y="140" fill="#6ee7b7" font-size="12" font-weight="600" text-anchor="middle">Oracle</text>
+  <rect x="248" y="120" width="88" height="32" rx="6" fill="#052e16" stroke="#10b981" stroke-width="1.2"/>
+  <text x="292" y="140" fill="#6ee7b7" font-size="12" font-weight="600" text-anchor="middle">Watchdog</text>
+  <rect x="350" y="120" width="106" height="32" rx="6" fill="#052e16" stroke="#10b981" stroke-width="1.2"/>
+  <text x="403" y="140" fill="#6ee7b7" font-size="12" font-weight="600" text-anchor="middle">Transformer</text>
+  <text x="310" y="200" fill="#3d8c6e" font-size="11" text-anchor="middle">Proprietary knowledge · Narrow scope</text>
+  <text x="310" y="216" fill="#3d8c6e" font-size="11" text-anchor="middle">Defensible moat · Pull or Push invocation</text>
+
+  <!-- AGENT chips -->
+  <rect x="505" y="120" width="88" height="32" rx="6" fill="#1c1917" stroke="#f59e0b" stroke-width="1.2"/>
+  <text x="549" y="140" fill="#fcd34d" font-size="12" font-weight="600" text-anchor="middle">Autopilot</text>
+  <rect x="608" y="120" width="78" height="32" rx="6" fill="#1c1917" stroke="#f59e0b" stroke-width="1.2"/>
+  <text x="647" y="140" fill="#fcd34d" font-size="12" font-weight="600" text-anchor="middle">Persona</text>
+  <text x="650" y="200" fill="#92400e" font-size="11" text-anchor="middle">Earned position · Gates 1 + 2 cleared</text>
+  <text x="650" y="216" fill="#92400e" font-size="11" text-anchor="middle">Router + human checkpoints required</text>
+
+  <!-- NOISE warning -->
+  <text x="650" y="326" fill="#fca5a5" font-size="26" text-anchor="middle" opacity="0.55">⚠</text>
+  <text x="650" y="360" fill="#f87171" font-size="12" font-weight="600" text-anchor="middle" opacity="0.85">Broad scope · Shallow skill</text>
+  <text x="650" y="378" fill="#b45454" font-size="11" text-anchor="middle">Drift · User abandonment</text>
+  <text x="650" y="394" fill="#b45454" font-size="11" text-anchor="middle">Most common failure mode</text>
+  <text x="650" y="434" fill="#7f2b2b" font-size="11" font-weight="600" text-anchor="middle">Ambient invocation without skill depth</text>
+
+  <!-- Progression path: L-shape through open space right of Transformer chip (x=468) -->
+  <!-- Arrow 1: Feature → Specialist (vertical at x=468, clear of all chips) -->
+  <line x1="468" y1="436" x2="468" y2="112" stroke="#34d399" stroke-width="1.5" marker-end="url(#aps-green)" opacity="0.75"/>
+  <text x="477" y="290" fill="#34d399" font-size="10" font-weight="600" text-anchor="start" opacity="0.85">① deepen</text>
+  <text x="477" y="304" fill="#34d399" font-size="10" font-weight="600" text-anchor="start" opacity="0.85">skill</text>
+
+  <!-- Arrow 2: Specialist → Agent (horizontal at y=110, above chips) -->
+  <circle cx="468" cy="110" r="2.5" fill="#34d399" opacity="0.75"/>
+  <line x1="468" y1="110" x2="642" y2="110" stroke="#fbbf24" stroke-width="1.5" marker-end="url(#aps-amber)" opacity="0.75"/>
+  <text x="555" y="102" fill="#fbbf24" font-size="10" font-weight="600" text-anchor="middle" opacity="0.85">② expand breadth</text>
+</svg>
