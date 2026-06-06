@@ -29,19 +29,19 @@ Decision 1 tells you what to build. Decision 2 tells you whether you can execute
 
 The first framework maps AI patterns onto a 2x2 defined by Skill Depth and Action Breadth.
 
-<img src="https://yadavilli.com/img/diagrams/ai-product-shape.svg" alt="AI Pattern Shape: 2x2 framework showing Feature, Specialist, Agent, and Noise quadrants mapped to Skill Depth and Action Breadth" style="width:100%;max-width:900px;display:block;margin:32px auto;" />
+<img src="https://yadavilli.com/img/diagrams/ai-product-shape.svg" alt="AI Pattern Shape: 2x2 framework showing the nine patterns across Feature, Specialist, Agent, and Noise quadrants, each labelled with its primitive verb" style="width:100%;max-width:900px;display:block;margin:32px auto;" />
 
 **Skill Depth** is how specialized and reliable the AI is at a specific task — precision, domain expertise, consistent correctness. A high-depth AI has proprietary knowledge or fine-tuned skill that a general model does not. A low-depth AI is a thin wrapper.
 
 **Action Breadth** is the scope and duration of the AI's action horizon — how many steps, how many domains, how long the AI operates before a human re-enters the loop.
 
-The four quadrants produce six patterns.
+The two axes give four quadrants. But quadrants are not patterns — three of the four hold more than one pattern, separated by a third, quieter variable: the **primitive verb**, the irreducible operation the AI performs. Two AIs can be equally skilled and equally narrow yet be different products because one *answers* and the other *monitors*. Nine patterns fall out across the grid. (Why exactly nine, and why not more, is the subject of the companion piece — [Why These and Only These](/insights/ai-pattern-generating-function/). Here we name them and put them to work.)
 
-**Feature** (low depth, low breadth): **Copilot** and **Lookup**. AI suggests, user decides. Single-task assist. Drafting, autocomplete, semantic search. Lowest trust requirement, fastest to ship. This is where every product starts, whether intentionally or not.
+**Feature** (low depth, low breadth): **Copilot** (*generate*) and **Lookup** (*retrieve*). AI suggests, user decides. Single-task assist. Drafting, autocomplete, semantic search. Lowest trust requirement, fastest to ship. This is where every product starts, whether intentionally or not.
 
-**Specialist** (high depth, low breadth): **Oracle**, **Watchdog**, and **Transformer**. Oracle delivers deep expertise on a narrow domain — contract review, policy lookup, technical Q&A. Watchdog monitors a stream for specific signals with high reliability — fraud detection, compliance monitoring, anomaly alerts. Transformer converts or enriches data in a pipeline — document extraction, entity recognition, classification. These are the patterns that create defensible moats: high skill applied to a narrow, well-defined problem.
+**Specialist** (high depth, low breadth): **Oracle**, **Watchdog**, **Transformer**, and **Artifact Generator**. Oracle (*answer*) delivers deep expertise on a narrow domain — contract review, policy lookup, technical Q&A. Watchdog (*monitor*) watches a stream for specific signals with high reliability — fraud detection, compliance monitoring, anomaly alerts. Transformer (*transform*) converts or enriches data in a pipeline — document extraction, entity recognition, classification. Artifact Generator (*generate*) produces a complete, domain-correct artifact from a brief — a drafted contract, a working code module, a finished design. It is not a Copilot suggesting a fragment; it manufactures the whole skilled object. These four create defensible moats: high skill applied to a narrow, well-defined problem.
 
-**Agent** (high depth, high breadth): **Autopilot** and **Persona**. Autopilot executes multi-step workflows with consistent skill, escalating to humans only at exceptions. Persona is AI as the interaction layer — extended conversations with domain depth. These are earned positions. They require proven skill depth before expanding breadth.
+**Agent** (high depth, high breadth): **Autopilot**, **Persona**, and **Sandbox**. Autopilot (*execute*) runs multi-step workflows with consistent skill, escalating to humans only at exceptions. Persona (*converse*) is AI as the interaction layer — extended conversations with domain depth. Sandbox (*simulate*) is an interactive model you act into — a learned world, a digital twin, a what-if engine that returns a coherent next state for you to act into again. These are earned positions. They require proven skill depth before expanding breadth.
 
 **Noise** (low depth, high breadth): Not a pattern. A trap. Broad scope without skill depth produces drift, user abandonment, and rapid commoditization. This is the "general AI assistant bolted onto everything" failure mode. Most products that add ambient AI without first demonstrating Specialist capability land here.
 
@@ -59,9 +59,9 @@ The second framework maps your organization's current AI maturity against your A
 
 **Explore** (low maturity, low ambition): Feature patterns. Copilot and Lookup. The primary goal here is not shipping AI features — it is building the maturity that makes every subsequent pattern trustworthy. Data pipelines, team skill, user trust, governance foundations. Organizations that rush through this stage do not save time. They borrow it, at interest.
 
-**Optimize** (high maturity, low ambition): Targeted Specialist plays. Oracle, Watchdog, Transformer. Deep skill applied to a high-value narrow problem. Strong ROI, low risk, high defensibility. This is the correct zone for most enterprises and regulated industries — not because they lack ambition, but because this is where the compounding starts.
+**Optimize** (high maturity, low ambition): Targeted Specialist plays. Oracle, Watchdog, Transformer, Artifact Generator. Deep skill applied to a high-value narrow problem. Strong ROI, low risk, high defensibility. This is the correct zone for most enterprises and regulated industries — not because they lack ambition, but because this is where the compounding starts.
 
-**Transform** (high maturity, high ambition): Agent patterns are viable. Autopilot at scale, Persona as the interaction layer. Data is clean, governance is structural, observability is in place. This is the destination most AI roadmaps describe as the starting point. Getting here requires clearing Gates 1 and 2 from the [Agency Maturity Map](/insights/agency-maturity-map/) — data readiness and structural governance. Not advisory governance. Architectural governance.
+**Transform** (high maturity, high ambition): Agent patterns are viable. Autopilot at scale, Persona as the interaction layer, Sandbox where an interactive model earns its keep. Data is clean, governance is structural, observability is in place. This is the destination most AI roadmaps describe as the starting point. Getting here requires clearing Gates 1 and 2 from the [Agency Maturity Map](/insights/agency-maturity-map/) — data readiness and structural governance. Not advisory governance. Architectural governance.
 
 **Danger Zone** (low maturity, high ambition): Ambition has outrun infrastructure. Most enterprise announcements about "agentic AI transformation" originate here. The correct move is not to slow down. It is to narrow scope immediately: pick one Specialist pattern, build demonstrable maturity in that domain, and earn the right to expand.
 
@@ -113,9 +113,9 @@ Everything else is the Noise quadrant.
 
 ## A Fair Challenge
 
-A named list of patterns invites one question, and it is the right one: *says who?* These patterns, placed on a grid — why these, and why not more? What stops the next person from announcing an eighth, a ninth, a fortieth?
+A named list of patterns invites one question, and it is the right one: *says who?* Nine patterns on a grid — why these, and why exactly nine? What stops the next person from announcing a tenth, or a fortieth?
 
-That deserves a real answer, not a longer list. Look closely at the Specialist quadrant above and you will notice it has room for one more — a cell the diagram leaves empty. That gap is not an oversight. It is the thread that, pulled, unravels the whole list into something sturdier: a *generating function* that produces the patterns and a closure argument that bounds them. [Why These and Only These](/insights/ai-pattern-generating-function/) derives the patterns from first principles, names the occupant of the empty cell, and shows exactly when the set is allowed to grow — and when it is not.
+That deserves a real answer, not a longer list. The nine are not chosen by taste; they are the cells that survive a generating function — primitive verb times skill depth times action breadth, minus a handful of pruning rules — and the count is bounded by a closure argument that turns "you missed one" into a precise, falsifiable burden. [Why These and Only These](/insights/ai-pattern-generating-function/) derives the patterns from first principles, runs the framework against nineteen adversarial attacks, and shows exactly when the set is allowed to grow — and when it is not.
 
 ---
 
