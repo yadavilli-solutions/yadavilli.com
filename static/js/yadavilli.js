@@ -20,7 +20,7 @@ const observer = new IntersectionObserver((entries) => {
       observer.unobserve(entry.target);
     }
   });
-}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+}, { threshold: 0, rootMargin: '0px 0px -20px 0px' });
 
 document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
