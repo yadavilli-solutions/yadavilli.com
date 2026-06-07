@@ -3,80 +3,94 @@
 
   <!-- Title -->
   <text x="460" y="34" fill="#f4f4f5" font-size="17" font-weight="700" text-anchor="middle">Matched Measurement Protocol</text>
-  <text x="460" y="54" fill="#52525b" font-size="12" text-anchor="middle">Choose the measurement instrument after identifying the trajectory — not before</text>
+  <text x="460" y="54" fill="#52525b" font-size="12" text-anchor="middle">Choose the measurement instrument after identifying the trajectory, not before</text>
 
-  <!-- Header row -->
-  <rect x="22" y="68" width="220" height="36" fill="#18181b" rx="4"/>
-  <rect x="254" y="68" width="290" height="36" fill="#18181b" rx="4"/>
-  <rect x="556" y="68" width="215" height="36" fill="#18181b" rx="4"/>
-  <rect x="783" y="68" width="115" height="36" fill="#18181b" rx="4"/>
-  <text x="132" y="91" fill="#a1a1aa" font-size="11" font-weight="700" text-anchor="middle" letter-spacing="0.5">TRAJECTORY</text>
-  <text x="399" y="91" fill="#a1a1aa" font-size="11" font-weight="700" text-anchor="middle" letter-spacing="0.5">RIGHT MEASUREMENT</text>
-  <text x="663" y="91" fill="#a1a1aa" font-size="11" font-weight="700" text-anchor="middle" letter-spacing="0.5">DETECTION SIGNAL</text>
-  <text x="840" y="91" fill="#a1a1aa" font-size="11" font-weight="700" text-anchor="middle" letter-spacing="0.5">TIMELINE</text>
+  <!-- Header row
+       COL1 TRAJECTORY:      x=22  w=178 cx=111
+       COL2 RIGHT MEASURE:   x=208 w=336 cx=376  text_x=222
+       COL3 DETECTION SIG:   x=552 w=200 cx=652  text_x=566
+       COL4 TIMELINE:        x=760 w=138 cx=829
+  -->
+  <rect x="22"  y="68" width="178" height="36" fill="#18181b" rx="4"/>
+  <rect x="208" y="68" width="336" height="36" fill="#18181b" rx="4"/>
+  <rect x="552" y="68" width="200" height="36" fill="#18181b" rx="4"/>
+  <rect x="760" y="68" width="138" height="36" fill="#18181b" rx="4"/>
+  <text x="111" y="91" fill="#a1a1aa" font-size="11" font-weight="700" text-anchor="middle" letter-spacing="0.5">TRAJECTORY</text>
+  <text x="376" y="91" fill="#a1a1aa" font-size="11" font-weight="700" text-anchor="middle" letter-spacing="0.5">RIGHT MEASUREMENT</text>
+  <text x="652" y="91" fill="#a1a1aa" font-size="11" font-weight="700" text-anchor="middle" letter-spacing="0.5">DETECTION SIGNAL</text>
+  <text x="829" y="91" fill="#a1a1aa" font-size="11" font-weight="700" text-anchor="middle" letter-spacing="0.5">TIMELINE</text>
 
   <!-- SHRINKAGE ROW -->
-  <rect x="22" y="116" width="220" height="96" fill="#052e16" stroke="#16a34a" stroke-width="1" rx="4"/>
-  <text x="132" y="148" fill="#4ade80" font-size="14" font-weight="700" text-anchor="middle">SHRINKAGE</text>
-  <text x="132" y="168" fill="#86efac" font-size="11" text-anchor="middle">Same work,</text>
-  <text x="132" y="184" fill="#86efac" font-size="11" text-anchor="middle">fewer people</text>
-  <rect x="254" y="116" width="290" height="96" fill="#0a1a0a" stroke="#16a34a" stroke-width="1" rx="4"/>
-  <text x="272" y="145" fill="#bbf7d0" font-size="11" font-weight="600">• Headcount per unit of output (quality-adjusted)</text>
-  <text x="272" y="163" fill="#86efac" font-size="11">• Fully-loaded cost per unit (license + labour + AI ops)</text>
-  <text x="272" y="181" fill="#86efac" font-size="11">• Baseline required 8 weeks pre-deployment</text>
-  <text x="272" y="199" fill="#4ade80" font-size="11">• Control group: matched team without deployment</text>
-  <rect x="556" y="116" width="215" height="96" fill="#0a1a0a" stroke="#16a34a" stroke-width="1" rx="4"/>
-  <text x="574" y="148" fill="#bbf7d0" font-size="11">Cost per unit falls.</text>
-  <text x="574" y="168" fill="#86efac" font-size="11">Headcount stable or</text>
-  <text x="574" y="186" fill="#86efac" font-size="11">declining at renewal.</text>
-  <rect x="783" y="116" width="115" height="96" fill="#0a1a0a" stroke="#16a34a" stroke-width="1" rx="4"/>
-  <text x="840" y="148" fill="#4ade80" font-size="12" font-weight="700" text-anchor="middle">18–36</text>
-  <text x="840" y="168" fill="#4ade80" font-size="12" font-weight="700" text-anchor="middle">months</text>
-  <text x="840" y="192" fill="#86efac" font-size="10" text-anchor="middle">Headcount</text>
-  <text x="840" y="204" fill="#86efac" font-size="10" text-anchor="middle">lags tech</text>
+  <rect x="22"  y="116" width="178" height="96" fill="#052e16" stroke="#16a34a" stroke-width="1" rx="4"/>
+  <text x="111" y="152" fill="#4ade80" font-size="14" font-weight="700" text-anchor="middle">SHRINKAGE</text>
+  <text x="111" y="172" fill="#86efac" font-size="11" text-anchor="middle">Same work,</text>
+  <text x="111" y="188" fill="#86efac" font-size="11" text-anchor="middle">fewer people</text>
+
+  <rect x="208" y="116" width="336" height="96" fill="#0a1a0a" stroke="#16a34a" stroke-width="1" rx="4"/>
+  <text x="222" y="142" fill="#bbf7d0" font-size="10" font-weight="600">• Headcount per unit of output (quality-adjusted)</text>
+  <text x="222" y="158" fill="#86efac" font-size="10">• Fully-loaded cost/unit: license + labour + AI ops overhead</text>
+  <text x="222" y="174" fill="#86efac" font-size="10">• Pre-deployment baseline: minimum 8 weeks</text>
+  <text x="222" y="190" fill="#4ade80" font-size="10">• Control group: matched team without AI deployment</text>
+
+  <rect x="552" y="116" width="200" height="96" fill="#0a1a0a" stroke="#16a34a" stroke-width="1" rx="4"/>
+  <text x="566" y="148" fill="#bbf7d0" font-size="11">Cost per unit falls.</text>
+  <text x="566" y="168" fill="#86efac" font-size="11">Headcount stable or</text>
+  <text x="566" y="186" fill="#86efac" font-size="11">declining at renewal.</text>
+
+  <rect x="760" y="116" width="138" height="96" fill="#0a1a0a" stroke="#16a34a" stroke-width="1" rx="4"/>
+  <text x="829" y="148" fill="#4ade80" font-size="12" font-weight="700" text-anchor="middle">18–36</text>
+  <text x="829" y="166" fill="#4ade80" font-size="12" font-weight="700" text-anchor="middle">months</text>
+  <text x="829" y="190" fill="#86efac" font-size="10" text-anchor="middle">Headcount</text>
+  <text x="829" y="202" fill="#86efac" font-size="10" text-anchor="middle">lags tech</text>
 
   <!-- PROFILE CHANGE ROW -->
-  <rect x="22" y="224" width="220" height="96" fill="#07101a" stroke="#2563eb" stroke-width="1.5" rx="4"/>
-  <text x="132" y="252" fill="#60a5fa" font-size="14" font-weight="700" text-anchor="middle">PROFILE</text>
-  <text x="132" y="270" fill="#60a5fa" font-size="14" font-weight="700" text-anchor="middle">CHANGE</text>
-  <text x="132" y="292" fill="#93c5fd" font-size="11" text-anchor="middle">Same headcount,</text>
-  <text x="132" y="308" fill="#93c5fd" font-size="11" text-anchor="middle">different work</text>
-  <rect x="254" y="224" width="290" height="96" fill="#07101a" stroke="#2563eb" stroke-width="1" rx="4"/>
-  <text x="272" y="253" fill="#bfdbfe" font-size="11" font-weight="600">• Time allocation studies (% routine vs judgment tasks)</text>
-  <text x="272" y="271" fill="#93c5fd" font-size="11">• Task-type distribution: before vs 12 months after</text>
-  <text x="272" y="289" fill="#93c5fd" font-size="11">• Output-quality shift: complexity of work handled</text>
-  <text x="272" y="307" fill="#60a5fa" font-size="11">• Skills premium: are high-judgment outputs increasing?</text>
-  <rect x="556" y="224" width="215" height="96" fill="#07101a" stroke="#2563eb" stroke-width="1" rx="4"/>
-  <text x="574" y="253" fill="#bfdbfe" font-size="11">Routine work % falls.</text>
-  <text x="574" y="271" fill="#93c5fd" font-size="11">Judgment/strategy</text>
-  <text x="574" y="289" fill="#93c5fd" font-size="11">work % rises.</text>
-  <text x="574" y="307" fill="#60a5fa" font-size="11">No cost signal.</text>
-  <rect x="783" y="224" width="115" height="96" fill="#07101a" stroke="#2563eb" stroke-width="1" rx="4"/>
-  <text x="840" y="256" fill="#60a5fa" font-size="12" font-weight="700" text-anchor="middle">12–24</text>
-  <text x="840" y="276" fill="#60a5fa" font-size="12" font-weight="700" text-anchor="middle">months</text>
-  <text x="840" y="300" fill="#93c5fd" font-size="10" text-anchor="middle">Task shift</text>
-  <text x="840" y="312" fill="#93c5fd" font-size="10" text-anchor="middle">visible early</text>
+  <rect x="22"  y="224" width="178" height="96" fill="#07101a" stroke="#2563eb" stroke-width="1.5" rx="4"/>
+  <text x="111" y="252" fill="#60a5fa" font-size="14" font-weight="700" text-anchor="middle">PROFILE</text>
+  <text x="111" y="270" fill="#60a5fa" font-size="14" font-weight="700" text-anchor="middle">CHANGE</text>
+  <text x="111" y="292" fill="#93c5fd" font-size="11" text-anchor="middle">Same headcount,</text>
+  <text x="111" y="308" fill="#93c5fd" font-size="11" text-anchor="middle">different work</text>
+
+  <rect x="208" y="224" width="336" height="96" fill="#07101a" stroke="#2563eb" stroke-width="1" rx="4"/>
+  <text x="222" y="250" fill="#bfdbfe" font-size="10" font-weight="600">• Time allocation studies: % routine vs judgment tasks</text>
+  <text x="222" y="266" fill="#93c5fd" font-size="10">• Task-type distribution shift: before vs 12 months after</text>
+  <text x="222" y="282" fill="#93c5fd" font-size="10">• Output-quality: complexity of work handled over time</text>
+  <text x="222" y="298" fill="#60a5fa" font-size="10">• Skills premium: are high-judgment outputs increasing?</text>
+
+  <rect x="552" y="224" width="200" height="96" fill="#07101a" stroke="#2563eb" stroke-width="1" rx="4"/>
+  <text x="566" y="253" fill="#bfdbfe" font-size="11">Routine work % falls.</text>
+  <text x="566" y="271" fill="#93c5fd" font-size="11">Judgment/strategy</text>
+  <text x="566" y="289" fill="#93c5fd" font-size="11">work % rises.</text>
+  <text x="566" y="307" fill="#60a5fa" font-size="11">No cost signal.</text>
+
+  <rect x="760" y="224" width="138" height="96" fill="#07101a" stroke="#2563eb" stroke-width="1" rx="4"/>
+  <text x="829" y="256" fill="#60a5fa" font-size="12" font-weight="700" text-anchor="middle">12–24</text>
+  <text x="829" y="274" fill="#60a5fa" font-size="12" font-weight="700" text-anchor="middle">months</text>
+  <text x="829" y="298" fill="#93c5fd" font-size="10" text-anchor="middle">Task shift</text>
+  <text x="829" y="310" fill="#93c5fd" font-size="10" text-anchor="middle">visible early</text>
 
   <!-- REPLACEMENT ROW -->
-  <rect x="22" y="332" width="220" height="96" fill="#1c0505" stroke="#dc2626" stroke-width="1.5" rx="4"/>
-  <text x="132" y="364" fill="#f87171" font-size="14" font-weight="700" text-anchor="middle">REPLACEMENT</text>
-  <text x="132" y="388" fill="#fca5a5" font-size="11" text-anchor="middle">Role eliminated,</text>
-  <text x="132" y="404" fill="#fca5a5" font-size="11" text-anchor="middle">humans removed</text>
-  <rect x="254" y="332" width="290" height="96" fill="#1c0505" stroke="#dc2626" stroke-width="1" rx="4"/>
-  <text x="272" y="361" fill="#fecaca" font-size="11" font-weight="600">• Role survival rate in target job family</text>
-  <text x="272" y="379" fill="#fca5a5" font-size="11">• Job posting volume by role type (external signal)</text>
-  <text x="272" y="397" fill="#fca5a5" font-size="11">• Org chart: headcount in role over 36 months</text>
-  <text x="272" y="415" fill="#f87171" font-size="11">• Ratio: AI output volume vs human output volume</text>
-  <rect x="556" y="332" width="215" height="96" fill="#1c0505" stroke="#dc2626" stroke-width="1" rx="4"/>
-  <text x="574" y="361" fill="#fecaca" font-size="11">Role headcount falls</text>
-  <text x="574" y="379" fill="#fca5a5" font-size="11">to zero or near-zero.</text>
-  <text x="574" y="397" fill="#fca5a5" font-size="11">Job postings decline.</text>
-  <text x="574" y="415" fill="#f87171" font-size="11">New roles emerge.</text>
-  <rect x="783" y="332" width="115" height="96" fill="#1c0505" stroke="#dc2626" stroke-width="1" rx="4"/>
-  <text x="840" y="364" fill="#f87171" font-size="12" font-weight="700" text-anchor="middle">3–7</text>
-  <text x="840" y="384" fill="#f87171" font-size="12" font-weight="700" text-anchor="middle">years</text>
-  <text x="840" y="408" fill="#fca5a5" font-size="10" text-anchor="middle">Slow-burn.</text>
-  <text x="840" y="420" fill="#fca5a5" font-size="10" text-anchor="middle">Visible late.</text>
+  <rect x="22"  y="332" width="178" height="96" fill="#1c0505" stroke="#dc2626" stroke-width="1.5" rx="4"/>
+  <text x="111" y="364" fill="#f87171" font-size="14" font-weight="700" text-anchor="middle">REPLACEMENT</text>
+  <text x="111" y="388" fill="#fca5a5" font-size="11" text-anchor="middle">Role eliminated,</text>
+  <text x="111" y="404" fill="#fca5a5" font-size="11" text-anchor="middle">humans removed</text>
+
+  <rect x="208" y="332" width="336" height="96" fill="#1c0505" stroke="#dc2626" stroke-width="1" rx="4"/>
+  <text x="222" y="358" fill="#fecaca" font-size="10" font-weight="600">• Role survival rate in target job family</text>
+  <text x="222" y="374" fill="#fca5a5" font-size="10">• Job posting volume by role type (external signal)</text>
+  <text x="222" y="390" fill="#fca5a5" font-size="10">• Org chart: headcount in role over 36 months</text>
+  <text x="222" y="406" fill="#f87171" font-size="10">• Ratio: AI output volume vs human output volume</text>
+
+  <rect x="552" y="332" width="200" height="96" fill="#1c0505" stroke="#dc2626" stroke-width="1" rx="4"/>
+  <text x="566" y="361" fill="#fecaca" font-size="11">Role headcount falls</text>
+  <text x="566" y="379" fill="#fca5a5" font-size="11">to zero or near-zero.</text>
+  <text x="566" y="397" fill="#fca5a5" font-size="11">Job postings decline.</text>
+  <text x="566" y="415" fill="#f87171" font-size="11">New roles emerge.</text>
+
+  <rect x="760" y="332" width="138" height="96" fill="#1c0505" stroke="#dc2626" stroke-width="1" rx="4"/>
+  <text x="829" y="364" fill="#f87171" font-size="12" font-weight="700" text-anchor="middle">3–7</text>
+  <text x="829" y="382" fill="#f87171" font-size="12" font-weight="700" text-anchor="middle">years</text>
+  <text x="829" y="406" fill="#fca5a5" font-size="10" text-anchor="middle">Slow-burn.</text>
+  <text x="829" y="418" fill="#fca5a5" font-size="10" text-anchor="middle">Visible late.</text>
 
   <!-- Bottom note -->
   <text x="460" y="462" fill="#3f3f46" font-size="11" text-anchor="middle">Applying Shrinkage metrics to a Profile Change trajectory produces a false negative every time. Identify trajectory first.</text>
