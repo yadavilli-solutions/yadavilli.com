@@ -12,13 +12,13 @@ tag: "Knowledge Engineering"
 ### What DeepDive Does
 
 - **Automated Code Analysis**: Parse and analyze codebases across languages and frameworks. DeepDive understands control flow, data dependencies, business rules, and integration patterns.
-- **Documentation Extraction**: Ingest technical documentation, runbooks, wikis, and operational guides — extracting entities, relationships, and procedures into structured form.
+- **Documentation Extraction**: Ingest technical documentation, runbooks, wikis, and operational guides, extracting entities, relationships, and procedures into structured form.
 - **Knowledge Graph Construction**: Build comprehensive knowledge graphs that map the relationships between systems, processes, data flows, and business logic across your entire technology estate.
-- **Business Logic Mapping**: Identify and extract the business rules embedded in legacy code — the institutional knowledge that's critical for modernization and often undocumented.
+- **Business Logic Mapping**: Identify and extract the business rules embedded in legacy code, the institutional knowledge that's critical for modernization and often undocumented.
 
 ### How It Fits the Pipeline
 
-DeepDive is the **Decode** phase of our **Calibrate · Decode · Activate** framework. It takes the landscape assessment from **[BenchMark](/products/benchmark/)** and goes deep — extracting the knowledge needed to power **[KnowHow](/products/knowhow/)** runbook generation.
+DeepDive is the **Decode** phase of our **Calibrate · Decode · Activate** framework. It takes the landscape assessment from **[BenchMark](/products/benchmark/)** and goes deep, extracting the knowledge needed to power **[KnowHow](/products/knowhow/)** runbook generation.
 
 ### Licensing
 

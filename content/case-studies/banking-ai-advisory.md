@@ -11,7 +11,7 @@ A $2B regional bank knew they needed AI but didn't know where to start. They'd s
 
 ## Our Approach
 
-We delivered a focused **AI Advisory** engagement designed to produce an actionable roadmap — not a theoretical framework:
+We delivered a focused **AI Advisory** engagement designed to produce an actionable roadmap, not a theoretical framework:
 
 1. **AI Readiness Assessment**: Evaluated the bank's data infrastructure, regulatory posture, talent capabilities, and technology stack using **[BenchMark](/products/benchmark/)**. Identified that their data warehouse was AI-ready but their feature engineering pipeline was a critical gap.
 
@@ -19,7 +19,7 @@ We delivered a focused **AI Advisory** engagement designed to produce an actiona
 
 3. **Build-vs-Buy Analysis**: For each prioritized use case, evaluated vendor solutions against custom development, factoring in the bank's specific regulatory requirements (OCC, FDIC, BSA/AML compliance).
 
-4. **3-Year Roadmap**: Delivered a phased implementation plan with clear milestones, budget requirements, talent acquisition needs, and governance framework — designed to deliver measurable ROI by Q1.
+4. **3-Year Roadmap**: Delivered a phased implementation plan with clear milestones, budget requirements, talent acquisition needs, and governance framework, designed to deliver measurable ROI by Q1.
 
 ## The Results
 

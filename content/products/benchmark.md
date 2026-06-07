@@ -11,8 +11,8 @@ tag: "Assessment & Infrastructure"
 
 ### What BenchMark Does
 
-- **Tech Stack Assessment**: Comprehensive analysis of your current technology stack — languages, frameworks, infrastructure, data pipelines — scored against AI-readiness criteria.
-- **Model Benchmarking**: Evaluate how different AI models perform against your specific use cases, data characteristics, and compliance requirements. No generic benchmarks — tests are tailored to your workloads.
+- **Tech Stack Assessment**: Comprehensive analysis of your current technology stack (languages, frameworks, infrastructure, data pipelines) scored against AI-readiness criteria.
+- **Model Benchmarking**: Evaluate how different AI models perform against your specific use cases, data characteristics, and compliance requirements. No generic benchmarks. Tests are tailored to your workloads.
 - **Infrastructure Blueprint**: Generate a concrete infrastructure plan for your AI initiatives, including compute requirements, deployment architecture, and integration points with existing systems.
 - **AI-Readiness Scoring**: A clear, quantified scorecard that tells leadership exactly where the organization stands and what needs to happen next.
 

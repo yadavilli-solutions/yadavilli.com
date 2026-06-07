@@ -7,7 +7,7 @@ tag: "Healthcare & Pharma"
 
 ## The Challenge
 
-A top-20 pharmaceutical company was drowning in clinical trial data. Their data science team — understaffed and spread across 8 active trials — took an average of 14 weeks to process and analyze each trial phase's data. Promising drug candidates were being delayed by data bottlenecks, not science.
+A top-20 pharmaceutical company was drowning in clinical trial data. Their data science team, understaffed and spread across 8 active trials, took an average of 14 weeks to process and analyze each trial phase's data. Promising drug candidates were being delayed by data bottlenecks, not science.
 
 ## Our Approach
 

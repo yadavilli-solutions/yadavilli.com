@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 500" font-family="Inter, system-ui, sans-serif">
+  <rect width="920" height="500" fill="#09090b" rx="12"/>
+
+  <!-- Title -->
+  <text x="460" y="34" fill="#f4f4f5" font-size="17" font-weight="700" text-anchor="middle">The Wrong Instrument Problem</text>
+  <text x="460" y="54" fill="#52525b" font-size="12" text-anchor="middle">Most organisations are measuring for Shrinkage while experiencing Profile Change — producing systematic false negatives</text>
+
+  <!-- Column headers -->
+  <rect x="220" y="70" width="320" height="36" fill="#18181b" rx="4"/>
+  <rect x="560" y="70" width="320" height="36" fill="#18181b" rx="4"/>
+  <text x="380" y="93" fill="#a1a1aa" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="0.5">SHRINKAGE METRICS</text>
+  <text x="720" y="93" fill="#a1a1aa" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="0.5">PROFILE CHANGE METRICS</text>
+  <text x="148" y="76" fill="#52525b" font-size="10" font-weight="600" text-anchor="middle">MEASUREMENT</text>
+  <text x="148" y="90" fill="#52525b" font-size="10" font-weight="600" text-anchor="middle">INSTRUMENT →</text>
+
+  <!-- Row labels -->
+  <rect x="22" y="118" width="186" height="152" fill="#18181b" rx="4"/>
+  <rect x="22" y="286" width="186" height="152" fill="#18181b" rx="4"/>
+  <text transform="translate(55,240) rotate(-90)" fill="#a1a1aa" font-size="10" font-weight="600" text-anchor="middle" letter-spacing="0.5">SHRINKAGE</text>
+  <text transform="translate(90,240) rotate(-90)" fill="#a1a1aa" font-size="11" text-anchor="middle">Fewer people,</text>
+  <text transform="translate(103,240) rotate(-90)" fill="#a1a1aa" font-size="11" text-anchor="middle">same output</text>
+  <text transform="translate(55,408) rotate(-90)" fill="#a1a1aa" font-size="10" font-weight="600" text-anchor="middle" letter-spacing="0.5">PROFILE CHANGE</text>
+  <text transform="translate(90,408) rotate(-90)" fill="#a1a1aa" font-size="11" text-anchor="middle">Same people,</text>
+  <text transform="translate(103,408) rotate(-90)" fill="#a1a1aa" font-size="11" text-anchor="middle">different work</text>
+  <text x="55" y="470" fill="#52525b" font-size="9" font-weight="600" text-anchor="middle">ACTUAL</text>
+  <text x="55" y="482" fill="#52525b" font-size="9" font-weight="600" text-anchor="middle">TRAJECTORY ↓</text>
+
+  <!-- Q1: Shrinkage trajectory + Shrinkage metrics = ACCURATE -->
+  <rect x="220" y="118" width="320" height="152" fill="#052e16"/>
+  <text x="380" y="172" fill="#4ade80" font-size="24" font-weight="800" text-anchor="middle">✓ ACCURATE</text>
+  <text x="380" y="200" fill="#bbf7d0" font-size="13" font-weight="600" text-anchor="middle">Right instrument, right signal.</text>
+  <text x="380" y="220" fill="#86efac" font-size="11" text-anchor="middle">Headcount per unit of output falls.</text>
+  <text x="380" y="238" fill="#4ade80" font-size="11" text-anchor="middle" opacity="0.8">Cost savings real and detectable.</text>
+  <text x="380" y="260" fill="#166534" font-size="10" font-weight="700" text-anchor="middle" letter-spacing="0.5">SIGNAL VISIBLE</text>
+
+  <!-- Q2: Shrinkage trajectory + Profile metrics = PARTIAL -->
+  <rect x="560" y="118" width="320" height="152" fill="#1c1207"/>
+  <text x="720" y="172" fill="#fbbf24" font-size="24" font-weight="800" text-anchor="middle">~ PARTIAL</text>
+  <text x="720" y="200" fill="#fef3c7" font-size="13" font-weight="600" text-anchor="middle">Task-type shift measurable.</text>
+  <text x="720" y="220" fill="#fde68a" font-size="11" text-anchor="middle">But headcount signal stronger here.</text>
+  <text x="720" y="238" fill="#fbbf24" font-size="11" text-anchor="middle" opacity="0.8">Useful secondary data.</text>
+  <text x="720" y="260" fill="#92400e" font-size="10" font-weight="700" text-anchor="middle" letter-spacing="0.5">WEAK SIGNAL</text>
+
+  <!-- Q3: Profile Change trajectory + Shrinkage metrics = FALSE NEGATIVE -->
+  <rect x="220" y="286" width="320" height="152" fill="#3b0a0a"/>
+  <rect x="220" y="286" width="320" height="152" fill="none" stroke="#dc2626" stroke-width="2"/>
+  <text x="380" y="336" fill="#f87171" font-size="22" font-weight="800" text-anchor="middle">✗ FALSE NEGATIVE</text>
+  <text x="380" y="362" fill="#fecaca" font-size="13" font-weight="600" text-anchor="middle">Real transformation. Zero cost signal.</text>
+  <text x="380" y="382" fill="#fca5a5" font-size="11" text-anchor="middle">Headcount flat. Output type changed.</text>
+  <text x="380" y="400" fill="#f87171" font-size="11" text-anchor="middle" opacity="0.8">Instrument can't see what happened.</text>
+  <rect x="278" y="418" width="204" height="22" fill="#7f1d1d" rx="4"/>
+  <text x="380" y="433" fill="#fecaca" font-size="10" font-weight="800" text-anchor="middle" letter-spacing="0.5">WHERE MOST ORGS ARE RIGHT NOW</text>
+
+  <!-- Q4: Profile Change trajectory + Profile metrics = ACCURATE -->
+  <rect x="560" y="286" width="320" height="152" fill="#07101a"/>
+  <rect x="560" y="286" width="320" height="152" fill="none" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="720" y="336" fill="#60a5fa" font-size="24" font-weight="800" text-anchor="middle">✓ ACCURATE</text>
+  <text x="720" y="362" fill="#bfdbfe" font-size="13" font-weight="600" text-anchor="middle">Time allocation studies detect it.</text>
+  <text x="720" y="382" fill="#93c5fd" font-size="11" text-anchor="middle">Task-type distribution shifts visible.</text>
+  <text x="720" y="400" fill="#60a5fa" font-size="11" text-anchor="middle" opacity="0.8">Transformation confirmed, quantified.</text>
+  <text x="720" y="430" fill="#1e3a5f" font-size="10" font-weight="700" text-anchor="middle" letter-spacing="0.5">SIGNAL VISIBLE</text>
+
+  <!-- Bottom note -->
+  <text x="460" y="470" fill="#3f3f46" font-size="11" text-anchor="middle">The "weak AI productivity evidence" finding is largely an instrument mismatch, not evidence that AI isn't transforming work.</text>
+  <text x="460" y="486" fill="#3f3f46" font-size="11" text-anchor="middle">Profile Change produces no signal on Shrinkage metrics even when genuine transformation is happening.</text>
+</svg>

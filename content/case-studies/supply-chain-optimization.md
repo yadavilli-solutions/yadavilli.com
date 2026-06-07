@@ -17,7 +17,7 @@ We deployed a three-phase AI transformation:
 
 2. **Route Optimization**: Implemented an AI-powered routing engine that incorporated real-time traffic patterns, weather data, and carrier capacity to dynamically optimize delivery routes across the network.
 
-3. **Inventory Rebalancing**: Created an intelligent rebalancing system that proactively redistributes inventory across warehouses based on predicted demand shifts — before stockouts occur.
+3. **Inventory Rebalancing**: Created an intelligent rebalancing system that proactively redistributes inventory across warehouses based on predicted demand shifts, before stockouts occur.
 
 ## The Results
 

@@ -7,17 +7,17 @@ tag: "Energy & Utilities"
 
 ## The Challenge
 
-A major energy utility was facing a crisis: 40% of their senior operations engineers were retiring within 18 months. These engineers held decades of institutional knowledge about grid management, outage response, and regulatory compliance procedures — knowledge that existed only in their heads and scattered, outdated documentation.
+A major energy utility was facing a crisis: 40% of their senior operations engineers were retiring within 18 months. These engineers held decades of institutional knowledge about grid management, outage response, and regulatory compliance procedures. Most of it existed only in their heads and scattered, outdated documentation.
 
 ## Our Approach
 
-We deployed the full product pipeline — **BenchMark**, **DeepDive**, and **KnowHow** — to capture and codify institutional knowledge before it walked out the door:
+We deployed the full product pipeline (**BenchMark**, **DeepDive**, and **KnowHow**) to capture and codify institutional knowledge before it walked out the door:
 
-1. **BenchMark — Assess**: Mapped the operational landscape, identifying 180+ critical procedures across grid management, outage response, maintenance, and regulatory reporting.
+1. **BenchMark (Assess)**: Mapped the operational landscape, identifying 180+ critical procedures across grid management, outage response, maintenance, and regulatory reporting.
 
-2. **DeepDive — Extract**: Reverse-engineered the SCADA systems, legacy control software, and existing documentation. Conducted structured knowledge interviews with senior engineers to capture undocumented tribal knowledge into the knowledge graph.
+2. **DeepDive (Extract)**: Reverse-engineered the SCADA systems, legacy control software, and existing documentation. Conducted structured knowledge interviews with senior engineers to capture undocumented tribal knowledge into the knowledge graph.
 
-3. **KnowHow — Operationalize**: Generated comprehensive, context-aware runbooks for every critical procedure. Each runbook included system dependencies, escalation paths, regulatory requirements, and decision trees that captured the judgment calls experienced engineers made intuitively.
+3. **KnowHow (Operationalize)**: Generated comprehensive, context-aware runbooks for every critical procedure. Each runbook included system dependencies, escalation paths, regulatory requirements, and decision trees that captured the judgment calls experienced engineers made intuitively.
 
 ## The Results
 
