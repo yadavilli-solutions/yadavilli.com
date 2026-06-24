@@ -17,13 +17,13 @@ Once you see that structure, everything else makes sense: why the ROI projection
 
 ---
 
-## What the Behavioral Evidence Actually Shows
+## What the Behavioral Evidence Shows
 
-<img src="/img/diagrams/ai-career-risk-matrix.svg" alt="The Career Risk Calculus: a 2x2 matrix showing why three of four outcomes favour AI adoption regardless of AI's actual value — the only catastrophic outcome sits in the Don't Adopt row" style="width:100%;max-width:920px;display:block;margin:32px auto;" />
+<img src="/img/diagrams/ai-career-risk-matrix.svg" alt="The Career Risk Calculus: a 2x2 matrix showing why three of four outcomes favour AI adoption regardless of AI's actual value, the only catastrophic outcome sits in the Don't Adopt row" style="width:100%;max-width:920px;display:block;margin:32px auto;" />
 
 The strongest evidence for the career insurance thesis is not a survey. It is the behavioral fingerprints: the observable patterns that only make coherent sense under this explanation.
 
-**The ROI is always 24 months forward.** Enterprise AI spend commitments are almost never accompanied by pre-deployment baseline measurement, and the productivity projections are systematically placed beyond the current performance review cycle. This is not a coincidence of timing. If the purchase were a genuine productivity bet, you would expect the buyer to instrument the baseline aggressively, to create the measurement conditions that would prove the thesis. Instead, the standard pattern is: deploy first, hope the gains appear, attribute whatever improves.
+**The ROI is always 24 months forward.** Enterprise AI spend commitments are almost never accompanied by pre-deployment baseline measurement, and the productivity projections are systematically placed beyond the current performance review cycle. This is not a coincidence of timing. If the purchase were a genuine productivity bet, you would expect the buyer to instrument the baseline aggressively, to create the measurement conditions that would prove the thesis. Instead, the standard pattern is: deploy first, hope the gains appear, attribute whatever optimizes.
 
 **The baseline is almost never captured.** Major management consulting surveys of AI-adopting enterprises consistently find that fewer than a third of companies can cite a specific, measured productivity gain tied to AI deployment with a controlled baseline. This is not a resource problem. Capturing a pre-deployment baseline costs two weeks of analyst time. Organizations that genuinely need cost savings (that are making a real productivity bet) run pilots with baselines because they need the data to make the next decision. Organizations that are buying for other reasons do not, because the baseline was never the point.
 
@@ -45,15 +45,15 @@ So the translation happens. The real motivation ("we need to be seen as an AI co
 
 This is not fraud. It is the normal institutional behavior of converting ambiguous, politically sensitive, or personally embarrassing motivations into the legible categories that financial systems require. Everyone involved understands the subtext. Nobody writes it down.
 
-The vendor ecosystem reinforces this translation. Microsoft, Anthropic, OpenAI, and Google have all built ROI calculators, productivity benchmark decks, and TCO analysis frameworks because that is the paperwork their buyers need to close procurement. The market produces productivity language because productivity language is what converts into signed contracts. No vendor has built a board-narrative value calculator, even though that is what a substantial fraction of their buyers actually need.
+The vendor platform reinforces this translation. Microsoft, Anthropic, OpenAI, and Google have all built ROI calculators, productivity benchmark decks, and TCO analysis frameworks because that is the paperwork their buyers need to close procurement. The market produces productivity language because productivity language is what converts into signed contracts. No vendor has built a board-narrative value calculator, even though that is what a substantial fraction of their buyers need.
 
 ---
 
-<img src="/img/diagrams/ai-budget-translation.svg" alt="The Budget Translation: how actual investment motivations — board pressure, career insurance, vendor bundling, FOMO — get translated into productivity language by the budget approval process" style="width:100%;max-width:920px;display:block;margin:32px auto;" />
+<img src="/img/diagrams/ai-budget-translation.svg" alt="The Budget Translation: how actual investment motivations, board pressure, career insurance, vendor bundling, FOMO, get translated into productivity language by the budget approval process" style="width:100%;max-width:920px;display:block;margin:32px auto;" />
 
 ## The Asymmetric Career Risk
 
-The specific mechanism driving this is worth naming precisely, because it explains the magnitude of the spending and its persistence across organizations with very different operational circumstances.
+The specific mechanism driving this is worth naming precisely, because it explains the magnitude of the spending and its persistence across organizations with different operational circumstances.
 
 The executive who approves enterprise AI spend faces an asymmetric personal risk structure.
 
@@ -71,15 +71,15 @@ This is not a moral failing. It is the predictable output of an incentive struct
 
 ---
 
-## Where Cost Savings Is Actually Real
+## Where Cost Savings Is Real
 
-The cost savings case is genuine in a specific, narrow, auditable set of circumstances, and it is worth preserving rather than letting it get buried under the broader critique.
+The cost savings case is genuine in a specific, narrow, auditable set of circumstances, and it is worth preserving instead of letting it get buried under the broader critique.
 
-When the task is high-volume, low-variance, and previously staffed by workers paid above the AI marginal cost per unit: the economics work and the causal chain is short. Tier-1 customer support deflection with measurable ticket volume and handle time. Contract review triage where the classification task is well-defined. Document extraction from structured PDFs where the output can be validated against a ground truth. In these workflows, AI can execute at a fraction of the prior labor cost, the quality can be audited, and the headcount impact can be tracked.
+When the task is high-volume, low-variance, and previously staffed by workers paid above the AI marginal cost per unit: the economics work and the causal chain is short. Tier-1 customer back deflection with measurable ticket volume and handle time. Contract review triage where the classification task is well-defined. Document extraction from structured PDFs where the output can be validated against a ground truth. In these workflows, AI can execute at a fraction of the prior labor cost, the quality can be audited, and the headcount impact can be tracked.
 
 These are real gains. Companies like Klarna have documented them in specific operational contexts. The GitHub Copilot studies showing 20-55% faster completion of bounded coding tasks reflect something real in the narrow category of tasks they were measuring.
 
-The problem is not that these gains do not exist. The problem is that they account for a small fraction of total enterprise AI spending, they exist in specific workflows rather than across broad organizational deployments, and they are being used as the evidentiary basis for spending decisions that extend far beyond the conditions under which the gains were demonstrated.
+The problem is not that these gains do not exist. The problem is that they account for a small fraction of total enterprise AI spending, they exist in specific workflows instead of across broad organizational deployments, and they are being used as the evidentiary basis for spending decisions that extend far beyond the conditions under which the gains were demonstrated.
 
 The narrow task automation case is real. It is not the reason most enterprise AI was purchased.
 
@@ -93,7 +93,7 @@ You cannot measure the ROI of an executive's career insurance policy. It was not
 
 This means the productivity measurement debate, conducted entirely on its own terms, is structurally unresolvable. The evidence will always be mixed because the investment was always mixed: some genuine task automation, some valuation narrative, some talent signaling, and a substantial portion of career insurance that was never going to appear in a productivity metric.
 
-The sharper question is not: are AI productivity gains real? The sharper question is: which fraction of AI spending was ever intended to produce measurable productivity gains, and is that fraction being measured rigorously? The answer to the second question, for almost every organization currently spending at scale, is: almost never. Which makes the debate about evidence for a claim that most buyers were never actually making.
+The sharper question is not: are AI productivity gains real? The sharper question is: which fraction of AI spending was ever intended to produce measurable productivity gains, and is that fraction being measured rigorously? The answer to the second question, for almost every organization currently spending at scale, is: almost never. Which makes the debate about evidence for a claim that most buyers were never making.
 
 ---
 
@@ -113,4 +113,4 @@ The productivity measurement problem is not a methodology problem. It is a hones
 
 ---
 
-If you are trying to build an AI investment framework that reflects what you are actually buying, [start with a free assessment.](/contact/)
+If you are trying to build an AI investment framework that reflects what you are buying, [start with a free assessment.](/contact/)

@@ -1,7 +1,7 @@
 ---
 title: "AI Advisory Shapes $2B Bank's Enterprise AI Strategy"
 date: 2026-05-05
-description: "How strategic AI advisory helped a regional bank build a 3-year AI roadmap that delivered ROI in the first quarter."
+description: "How strategic AI advisory established a regional bank's 3-year AI roadmap that delivered ROI in the first quarter."
 tag: "Banking & Financial Services"
 ---
 
@@ -13,7 +13,7 @@ A $2B regional bank knew they needed AI but didn't know where to start. They'd s
 
 We delivered a focused **AI Advisory** engagement designed to produce an actionable roadmap, not a theoretical framework:
 
-1. **AI Readiness Assessment**: Evaluated the bank's data infrastructure, regulatory posture, talent capabilities, and technology stack using **[BenchMark](/products/benchmark/)**. Identified that their data warehouse was AI-ready but their feature engineering pipeline was a critical gap.
+1. **AI Readiness Assessment**: Identified gaps through BenchMark, and evaluated the bank's data infrastructure, regulatory posture, and talent capabilities.
 
 2. **Use Case Prioritization**: Scored 25 potential AI use cases across ROI potential, implementation complexity, regulatory risk, and data readiness. Narrowed the focus to 5 high-impact, low-risk opportunities for the first year.
 

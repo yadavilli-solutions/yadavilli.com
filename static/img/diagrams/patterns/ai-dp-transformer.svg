@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" width="900" height="600" font-family="Inter, system-ui, sans-serif">
+  <defs>
+    <marker id="ar-em" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><polygon points="0 0, 9 3.5, 0 7" fill="#34d399"/></marker>
+    <marker id="ar-gy" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><polygon points="0 0, 9 3.5, 0 7" fill="#71717a"/></marker>
+  </defs>
+
+  <rect width="900" height="600" fill="#09090b" rx="14"/>
+
+  <!-- Title block -->
+  <text x="40" y="46" fill="#6ee7b7" font-size="23" font-weight="700">Transformer</text>
+  <rect x="200" y="29" width="84" height="22" rx="11" fill="#052e16" stroke="#10b981" stroke-width="1.1"/>
+  <text x="242" y="44" fill="#6ee7b7" font-size="11" font-weight="600" text-anchor="middle">transform</text>
+  <text x="40" y="70" fill="#a1a1aa" font-size="13">Converts input A into output B faithfully — one in, one out.</text>
+  <!-- Invocation badge -->
+  <rect x="788" y="30" width="72" height="24" rx="12" fill="none" stroke="#10b981" stroke-width="1.2"/>
+  <text x="824" y="46" fill="#6ee7b7" font-size="10.5" font-weight="700" text-anchor="middle" letter-spacing="0.5">PULL</text>
+  <text x="784" y="20" fill="#52525b" font-size="9" text-anchor="end">SPECIALIST · deep skill, narrow scope</text>
+
+  <!-- Spec / rules cylinder (top) -->
+  <g>
+    <path d="M375 174 a78 15 0 0 0 156 0 v-44 a78 15 0 0 0 -156 0 z" fill="#1e293b" stroke="#64748b" stroke-width="1.3"/>
+    <ellipse cx="453" cy="130" rx="78" ry="15" fill="#1e293b" stroke="#64748b" stroke-width="1.3"/>
+    <text x="453" y="134" fill="#cbd5e1" font-size="12" font-weight="600" text-anchor="middle">Spec / rules</text>
+    <text x="453" y="159" fill="#94a3b8" font-size="9.5" text-anchor="middle">defines the A-to-B mapping</text>
+  </g>
+
+  <!-- Input A -->
+  <rect x="48" y="268" width="128" height="80" rx="8" fill="#18181b" stroke="#71717a" stroke-width="1.4"/>
+  <text x="112" y="302" fill="#d4d4d8" font-size="14" font-weight="700" text-anchor="middle">Input A</text>
+  <text x="112" y="322" fill="#8a8a93" font-size="10" text-anchor="middle">source content</text>
+
+  <!-- Transformer engine -->
+  <rect x="368" y="252" width="170" height="112" rx="10" fill="#052e16" stroke="#10b981" stroke-width="2"/>
+  <text x="453" y="292" fill="#6ee7b7" font-size="15" font-weight="700" text-anchor="middle">Transformer engine</text>
+  <text x="453" y="314" fill="#3d8c6e" font-size="10.5" text-anchor="middle">apply the transform</text>
+  <text x="453" y="329" fill="#3d8c6e" font-size="10.5" text-anchor="middle">per the spec</text>
+
+  <!-- Output B -->
+  <rect x="724" y="262" width="132" height="92" rx="8" fill="#06281a" stroke="#10b981" stroke-width="1.4"/>
+  <line x1="744" y1="312" x2="836" y2="312" stroke="#10b981" stroke-width="0.8" opacity="0.5"/>
+  <text x="790" y="296" fill="#6ee7b7" font-size="14" font-weight="700" text-anchor="middle">Output B</text>
+  <text x="790" y="332" fill="#3d8c6e" font-size="10" text-anchor="middle">deterministic</text>
+  <text x="790" y="346" fill="#3d8c6e" font-size="10" text-anchor="middle">faithful to A</text>
+
+  <!-- No-state marker: struck-through greyed memory store -->
+  <g opacity="0.5">
+    <path d="M648 430 a52 10 0 0 0 104 0 v-30 a52 10 0 0 0 -104 0 z" fill="#1e293b" stroke="#52525b" stroke-width="1.2"/>
+    <ellipse cx="700" cy="400" rx="52" ry="10" fill="#1e293b" stroke="#52525b" stroke-width="1.2"/>
+    <text x="700" y="402" fill="#71717a" font-size="10.5" font-weight="600" text-anchor="middle">memory</text>
+    <line x1="638" y1="438" x2="762" y2="392" stroke="#f87171" stroke-width="2.2"/>
+  </g>
+  <text x="700" y="458" fill="#8a8a93" font-size="10" text-anchor="middle">no state — each call independent</text>
+
+  <!-- Flow arrows -->
+  <!-- 1 input A -> engine -->
+  <line x1="176" y1="306" x2="362" y2="306" stroke="#34d399" stroke-width="1.7" marker-end="url(#ar-em)"/>
+  <text x="269" y="296" fill="#34d399" font-size="11" font-weight="700" text-anchor="middle">1 · submit A</text>
+  <!-- 2 spec -> engine -->
+  <line x1="453" y1="192" x2="453" y2="246" stroke="#71717a" stroke-width="1.5" marker-end="url(#ar-gy)"/>
+  <text x="463" y="218" fill="#94a3b8" font-size="10.5" text-anchor="start">2 · apply spec</text>
+  <!-- 3 engine -> output B -->
+  <line x1="538" y1="308" x2="718" y2="308" stroke="#34d399" stroke-width="1.7" marker-end="url(#ar-em)"/>
+  <text x="628" y="298" fill="#34d399" font-size="11" font-weight="700" text-anchor="middle">3 · produce B</text>
+
+  <!-- Signature callout -->
+  <text x="453" y="398" fill="#52525b" font-size="10" text-anchor="middle" letter-spacing="0.5">STRUCTURAL SIGNATURE</text>
+  <text x="453" y="415" fill="#a1a1aa" font-size="11" text-anchor="middle" font-weight="600">a pure A-to-B pipe: faithful, repeatable, no initiative</text>
+
+  <!-- Divider -->
+  <line x1="40" y1="500" x2="860" y2="500" stroke="#3f3f46" stroke-width="1" stroke-dasharray="8,5"/>
+
+  <!-- Bottom band -->
+  <text x="40" y="524" fill="#71717a" font-size="10" font-weight="700" letter-spacing="0.5">INVOCATION</text>
+  <text x="40" y="542" fill="#a1a1aa" font-size="11">Pull — caller submits A; one call, one B; nothing carried forward.</text>
+  <text x="40" y="566" fill="#71717a" font-size="10" font-weight="700" letter-spacing="0.5">FORCES</text>
+  <text x="40" y="584" fill="#a1a1aa" font-size="11">Fidelity over creativity — it must not invent; validate that B preserves A.</text>
+
+  <text x="860" y="524" fill="#71717a" font-size="10" font-weight="700" letter-spacing="0.5" text-anchor="end">DISTINGUISHED FROM</text>
+  <text x="860" y="542" fill="#a1a1aa" font-size="11" text-anchor="end">Artifact Generator — assembles from a brief; this is 1:1 conversion.</text>
+  <text x="860" y="566" fill="#71717a" font-size="10" font-weight="700" letter-spacing="0.5" text-anchor="end">&#160;</text>
+  <text x="860" y="584" fill="#a1a1aa" font-size="11" text-anchor="end">Oracle — answers a question; this reshapes given content.</text>
+</svg>

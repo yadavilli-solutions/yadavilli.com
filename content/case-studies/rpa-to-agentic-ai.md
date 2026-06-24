@@ -9,17 +9,15 @@ tag: "Financial Services"
 
 A leading financial services provider was struggling with a massive library of legacy RPA bots. Over 50 bots had been deployed across the organization, each one brittle, requiring constant maintenance, and unable to handle even minor changes in UI or business logic. Weekly failures were the norm, not the exception.
 
-The operational burden was immense: a dedicated team of 12 engineers spent most of their time patching broken scripts rather than building new capabilities. Leadership recognized this wasn't sustainable.
+The operational burden was immense: a dedicated team of 12 engineers spent most of their time patching broken scripts instead of building new capabilities. Leadership recognized this wasn't sustainable.
 
 ## Our Approach
 
 We implemented a phased transition from RPA to **Agentic AI** using our Calibrate · Decode · Activate framework:
 
-1. **Calibrate: Assessment with BenchMark**: Used **[BenchMark](/products/benchmark/)** to analyze the underlying legacy systems and map every process handled by the RPA bots. This identified which bots were redundant, which processes could be consolidated, and which required full agent redesign.
+![Calibrate Decode Activate Product Pipeline](/img/diagrams/product-pipeline.svg)
 
-2. **Decode: Knowledge Extraction with DeepDive**: Deployed **[DeepDive](/products/deepdive/)** to reverse-engineer the business logic embedded in the RPA scripts and underlying systems, building a comprehensive knowledge graph of process dependencies and exception handling rules.
-
-3. **Activate: Operationalize with AI Agents**: Built intelligent agents capable of reasoning through process exceptions and adapting to UI changes. Deployed as a managed service with real-time monitoring and performance optimization.
+The transformation followed three phases: first, we calibrated the environment using BenchMark to map RPA processes; next, we decoded the underlying business logic using DeepDive to build process knowledge graphs; finally, we activated the knowledge by deploying autonomous AI agents to manage exceptions and adapt to UI changes.
 
 ## The Results
 

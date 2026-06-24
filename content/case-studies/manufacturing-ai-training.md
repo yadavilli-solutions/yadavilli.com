@@ -11,13 +11,7 @@ A global manufacturing firm with 12 plants across North America had invested hea
 
 ## Our Approach
 
-We designed and delivered a comprehensive **Training & Enablement** program calibrated to three distinct audiences:
-
-1. **Executive AI Literacy**: Two-day intensive for the C-suite and plant directors, demystifying AI capabilities, establishing realistic expectations, and building an AI governance framework they could champion.
-
-2. **Engineering Prompt Design & Agent Interaction**: Hands-on workshops for 500+ floor engineers and maintenance technicians, teaching them to effectively work with AI recommendations, validate outputs, and provide feedback that improved model accuracy.
-
-3. **Data Team Upskilling**: Deep-dive sessions for the central data science team on agent architecture, knowledge graph design, and production ML operations, transitioning them from ad-hoc model building to systematic AI engineering.
+We designed and delivered a training and enablement program **calibrated to three distinct audiences**. The program addressed executive cohorts to establish AI literacy and governance frameworks, floor engineers to teach prompt design and agent interaction across plants, and central data teams to transition them from ad-hoc model building to systematic agent engineering.
 
 ## The Results
 

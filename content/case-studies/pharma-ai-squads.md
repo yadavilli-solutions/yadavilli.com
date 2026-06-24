@@ -11,13 +11,7 @@ A top-20 pharmaceutical company was drowning in clinical trial data. Their data 
 
 ## Our Approach
 
-We deployed a dedicated **AI Squad** (AI Agents + FDE + Support × 2) embedded directly within their R&D data team:
-
-1. **AI-Powered Data Ingestion**: Built intelligent agents to automatically normalize, validate, and reconcile clinical data from 200+ trial sites with different data formats and reporting standards.
-
-2. **Automated Signal Detection**: Deployed ML models trained on the company's historical trial data to flag safety signals and efficacy patterns weeks earlier than manual review.
-
-3. **Intelligent Reporting**: Created an automated reporting pipeline that generated regulatory-ready data summaries, cutting report preparation from 3 weeks to 2 days.
+We deployed a dedicated AI Squad combining AI agents, full-stack engineers, and operations engineers, **embedding them directly within the R&D data team**. We automated clinical data ingestion across different site formats, deployed machine learning models to detect early safety signals, and automated regulatory reporting preparation.
 
 ## The Results
 

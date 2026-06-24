@@ -9,7 +9,7 @@ tag: "Strategy"
 
 Most product teams approach AI integration by asking the wrong question. Where should we add AI? Which features can we enhance? How do we match what our competitors are doing?
 
-These are tactical questions. The strategic questions are different: **What shape should the AI take?** And **Are we ready to build and sustain it?**
+These are tactical questions. The strategic questions are different: **What shape should the AI take?** And Are we ready to build and sustain it?
 
 These two questions are almost never asked simultaneously. Most teams choose a shape by accident, usually by copying what they see elsewhere, and discover readiness gaps after the architecture is locked. The result is the pattern nobody talks about: the product that is technically AI-powered, demonstrably underperforming, and unclear on why.
 
@@ -37,11 +37,11 @@ The first framework maps AI patterns onto a 2x2 defined by Skill Depth and Actio
 
 The two axes give four quadrants. But quadrants are not patterns. Three of the four hold more than one pattern, separated by a third, quieter variable: the **primitive verb**, the irreducible operation the AI performs. Two AIs can be equally skilled and equally narrow yet be different products because one *answers* and the other *monitors*. Nine patterns fall out across the grid. (Why exactly nine, and why not more, is the subject of the companion piece, [Why These and Only These](/insights/ai-pattern-generating-function/). Here we name them and put them to work.)
 
-**Feature** (low depth, low breadth): **Copilot** (*generate*) and **Lookup** (*retrieve*). AI suggests, user decides. Single-task assist. Drafting, autocomplete, semantic search. Lowest trust requirement, fastest to ship. This is where every product starts, whether intentionally or not.
+**Feature** (low depth, low breadth): Copilot (*generate*) and Lookup (*retrieve*). AI suggests, user decides. Single-task assist. Drafting, autocomplete, semantic search. Lowest trust requirement, fastest to ship. This is where every product starts, whether intentionally or not.
 
-**Specialist** (high depth, low breadth): **Oracle**, **Watchdog**, **Transformer**, and **Artifact Generator**. Oracle (*answer*) delivers deep expertise on a narrow domain: contract review, policy lookup, technical Q&A. Watchdog (*monitor*) watches a stream for specific signals with high reliability: fraud detection, compliance monitoring, anomaly alerts. Transformer (*transform*) converts or enriches data in a pipeline: document extraction, entity recognition, classification. Artifact Generator (*generate*) produces a complete, domain-correct artifact from a brief: a drafted contract, a working code module, a finished design. It is not a Copilot suggesting a fragment; it manufactures the whole skilled object. These four create defensible moats: high skill applied to a narrow, well-defined problem.
+**Specialist** (high depth, low breadth): Oracle, Watchdog, Transformer, and Artifact Generator. Oracle (*answer*) delivers deep expertise on a narrow domain: contract review, policy lookup, technical Q&A. Watchdog (*monitor*) watches a stream for specific signals with high reliability: fraud detection, compliance monitoring, anomaly alerts. Transformer (*transform*) converts or enriches data in a pipeline: document extraction, entity recognition, classification. Artifact Generator (*generate*) produces a complete, domain-correct artifact from a brief: a drafted contract, a working code module, a finished design. It is not a Copilot suggesting a fragment; it manufactures the whole skilled object. These four create defensible moats: high skill applied to a narrow, well-defined problem.
 
-**Agent** (high depth, high breadth): **Autopilot**, **Persona**, and **Sandbox**. Autopilot (*execute*) runs multi-step workflows with consistent skill, escalating to humans only at exceptions. Persona (*converse*) is AI as the interaction layer: extended conversations with domain depth. Sandbox (*simulate*) is an interactive model you act into, a learned world, a digital twin, a what-if engine that returns a coherent next state for you to act into again. These are earned positions. They require proven skill depth before expanding breadth.
+**Agent** (high depth, high breadth): Autopilot, Persona, and Sandbox. Autopilot (*execute*) runs multi-step workflows with consistent skill, escalating to humans only at exceptions. Persona (*converse*) is AI as the interaction layer: extended conversations with domain depth. Sandbox (*simulate*) is an interactive model you act into, a learned world, a digital twin, a what-if engine that returns a coherent next state for you to act into again. These are earned positions. They require proven skill depth before expanding breadth.
 
 **Noise** (low depth, high breadth): Not a pattern. A trap. Broad scope without skill depth produces drift, user abandonment, and rapid commoditization. This is the "general AI assistant bolted onto everything" failure mode. Most products that add ambient AI without first demonstrating Specialist capability land here.
 
@@ -49,7 +49,7 @@ The two axes give four quadrants. But quadrants are not patterns. Three of the f
 
 ## Decision 2: Adoption Readiness
 
-The second framework maps your organization's current AI maturity against your AI ambition to identify which zone you are actually operating in, and which patterns you can credibly execute.
+The second framework maps your organization's current AI maturity against your AI ambition to identify which zone you are operating in, and which patterns you can credibly execute.
 
 <img src="https://yadavilli.com/img/diagrams/ai-adoption-readiness.svg" alt="Adoption Readiness: 2x2 framework with AI Maturity vs AI Ambition, showing Explore, Optimize, Transform, and Danger Zone quadrants" style="width:100%;max-width:900px;display:block;margin:32px auto;" />
 
@@ -89,7 +89,7 @@ Invocation protocol should be chosen after pattern selection, not before. The co
 
 The framework applies across product types, but the right starting zone differs by industry.
 
-**SaaS.** Competitive pressure creates Danger Zone risk: high ambition, variable maturity. Copilot is now table stakes. The differentiation play is Oracle: who has the deepest domain-specific knowledge? The moat is Autopilot: reliable multi-step workflow execution raises switching cost dramatically. The Noise trap is the AI feature factory, Copilot on every surface, no domain depth on any of them. Thin wrappers get commoditized when foundation models improve.
+**SaaS.** Competitive pressure creates Danger Zone risk: high ambition, variable maturity. Copilot is now table stakes. The differentiation play is Oracle: who has the deepest domain-specific knowledge? The moat is Autopilot: reliable multi-step workflow execution raises switching cost dramatically. The Noise trap is the AI feature factory, Copilot on every surface, no domain depth on any of them. Thin wrappers get commoditized when foundation models optimize.
 
 **Enterprise.** The maturity gap is the primary problem, not ambition. High maturity in pockets, low maturity overall. The documented-policy-versus-operational-reality gap makes Oracle deployments unreliable until data readiness is demonstrated. Transformer and Watchdog are the correct first plays: enriching existing data pipelines and strengthening monitoring. Autopilot requires structural governance: Gate 2 from the maturity map. Shadow AI is the failure mode for high-ambition organizations in low-maturity zones: employees using personal AI tools outside the governance perimeter, extending breadth without governed depth at the individual level.
 
@@ -101,13 +101,13 @@ The framework applies across product types, but the right starting zone differs 
 
 Use the two frameworks in sequence.
 
-**Start with Adoption Readiness.** Before deciding what to build, assess your actual zone, not your intended zone. What is the state of your data? Are your governance mechanisms structural or advisory? Do you have observability into what your current AI deployments are actually doing? Your answers determine your starting zone and which patterns are credibly executable.
+**Start with Adoption Readiness.** Before deciding what to build, assess your actual zone, not your intended zone. What is the state of your data? Are your governance mechanisms structural or advisory? Do you have observability into what your current AI deployments are doing? Your answers determine your starting zone and which patterns are credibly executable.
 
 **Then choose your pattern.** Given your zone, which quadrant can you sustain? Feature patterns are always available. Specialist patterns require demonstrated data readiness. Agent patterns require cleared gates and proven depth.
 
 **Then choose your invocation protocol.** Given your pattern, how should the AI get triggered? Pull for low-trust or early deployments. Push for event-driven workflows with full event sourcing. Ambient only when Specialist depth is proven and governance is structural.
 
-The organizations that will build trustworthy, differentiated AI products are not the ones moving fastest. They are the ones who cleared each decision before making the next one. They know which pattern they are building, why their maturity supports it, and how invocation will affect the breadth they are committing to govern.
+The organizations that will build trustworthy, differentiated AI products are not the ones moving fastest. They are the ones who cleared each decision before making the next one. They know which pattern they are building, why their maturity backs it, and how invocation will affect the breadth they are committing to govern.
 
 Everything else is the Noise quadrant.
 
@@ -119,4 +119,4 @@ That deserves a real answer, not a longer list. The nine are not chosen by taste
 
 ---
 
-*If you want to know which pattern fits your product, and whether your maturity actually supports it, [start with a conversation.](/contact/)*
+*If you want to know which pattern fits your product, and whether your maturity backs it, [start with a conversation.](/contact/)*

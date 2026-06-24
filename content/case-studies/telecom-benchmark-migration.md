@@ -7,17 +7,11 @@ tag: "Telecommunications"
 
 ## The Challenge
 
-A national telecommunications provider had committed $150M to a cloud migration initiative. Six months in, the program was stalling: teams were migrating applications that didn't need to move, skipping ones that did, and the infrastructure architecture couldn't support the AI workloads leadership had planned for Phase 2.
+A national telecommunications provider had committed $150M to a cloud migration initiative. Six months in, the program was stalling: teams were migrating applications that didn't need to move, skipping ones that did, and the infrastructure architecture was incompatible with the AI workloads leadership had planned for Phase 2.
 
 ## Our Approach
 
-We deployed **[BenchMark](/products/benchmark/)** to provide a rigorous, data-driven foundation for the migration program:
-
-1. **Tech Stack Assessment**: Scored 340+ applications across AI-readiness, cloud compatibility, business criticality, and technical debt, replacing the subjective prioritization that had been driving decisions.
-
-2. **Model Benchmarking**: Evaluated 6 AI model architectures against the telecom's specific workloads (network anomaly detection, customer churn prediction, and capacity planning) to determine actual infrastructure requirements.
-
-3. **Infrastructure Blueprint**: Generated a concrete infrastructure blueprint that right-sized compute, storage, and networking for both migration and future AI workloads, replacing the over-provisioned architecture that was burning budget.
+We deployed BenchMark to **provide a data-driven foundation for the migration program**. We executed the migration across three areas: assessing the tech stack to score 340 applications for cloud compatibility, benchmarking six model architectures against telecom workloads, and generating an infrastructure blueprint to optimize compute provisioning.
 
 ## The Results
 

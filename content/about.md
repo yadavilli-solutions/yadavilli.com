@@ -6,15 +6,17 @@ layout: "about"
 
 ## Who We Are
 
-Yadavilli Solutions is an AI firm that bridges the gap between enterprise ambition and AI reality. We combine **strategic advisory**, **licensable AI products**, and **dedicated AI Squads** to help organizations move from experimentation to production, quickly and with confidence.
+Yadavilli Solutions is an AI firm that bridges the gap between enterprise ambition and AI reality. We combine strategic advisory, licensable AI products, and dedicated AI squads to **transition organizations from experimentation to production** with clear milestones.
 
 ## Our Vision
 
-The enterprises that win in the next decade won't just *use* AI; they'll be *built on* AI. We exist to make that transition practical, measurable, and sustainable. No hype cycles. No shelfware pilots. Just AI that ships.
+The enterprises that win in the next decade must build on AI foundations instead of wrapping existing processes in AI tools. We make this transition **practical and measurable**, eliminating shelfware pilots and theoretical hype.
 
 ## Why We're Different
 
-- **Products + Services**: We're not just consultants who leave behind slide decks. Our product suite (**BenchMark**, **DeepDive**, and **KnowHow**) gives you lasting, licensable tools with dedicated engineering and support built in.
-- **AI Squads**: Need hands-on AI talent embedded in your team? Our AI Squads (AI Agents + FDE + Support × 2) integrate with your existing teams to accelerate delivery from day one.
-- **Applied AI, Not Theoretical**: We specialize in putting AI into production workflows (Product Development, QA, DevOps, Operations), not building demos.
-- **Calibrate · Decode · Activate**: Our three-phase intelligence pipeline takes you from measurement to knowledge extraction to operational excellence. No big-bang transformations.
+![Calibrate Decode Activate Product Pipeline](/img/diagrams/product-pipeline.svg)
+
+- **Products and Services**: We build functional software instead of delivering static presentation decks. The BenchMark, DeepDive, and KnowHow products provide licensable tooling backed by engineering teams.
+- **AI Squads**: Our squads combine AI agents, full-stack engineers, and operations engineers, integrating with your existing teams to accelerate delivery from day one.
+- **Applied AI, Not Theoretical**: We specialize in putting AI into production workflows, including Product Development, QA, DevOps, and Operations, instead of building static demos.
+- **Calibrate · Decode · Activate**: Our three-phase intelligence pipeline takes you from measurement to knowledge extraction to operational excellence, avoiding big-bang transformations.
