@@ -20,7 +20,7 @@ tag: "Portfolio Governance"
 
 ### How It Fits the Pipeline
 
-AI Portfolio Explorer represents the Discover phase of our Discover . Calibrate . Decode . Activate framework. It decides what enters the pipeline: the prioritized use-case backlog feeds directly into [BenchMark](/products/benchmark/) for infrastructure and model calibration, and the portfolio's governance cadence tracks each initiative through [DeepDive](/products/deepdive/) and [KnowHow](/products/knowhow/).
+AI Portfolio Explorer represents the Discover phase of our Discover · Calibrate · Decode · Activate framework. It decides what enters the pipeline: the prioritized use-case backlog feeds directly into [BenchMark](/products/benchmark/) for infrastructure and model calibration, and the portfolio's governance cadence tracks each initiative through [DeepDive](/products/deepdive/) and [KnowHow](/products/knowhow/).
 
 ### Licensing
 
