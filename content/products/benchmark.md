@@ -7,7 +7,7 @@ tag: "Assessment & Infrastructure"
 
 ## The Starting Point for Every AI Initiative
 
-**BenchMark** is the foundation of our product suite. Before you can transform, you need to understand exactly where you stand. BenchMark provides a rigorous, data-driven assessment of your technology architecture and AI readiness.
+**BenchMark** is the measurement foundation of our product suite. Before you can transform, you need to understand exactly where you stand. BenchMark provides a rigorous, data-driven assessment of your technology architecture and AI readiness.
 
 ### What BenchMark Does
 
@@ -18,7 +18,7 @@ tag: "Assessment & Infrastructure"
 
 ### How It Fits the Pipeline
 
-BenchMark represents the Calibrate phase of our Calibrate · Decode · Activate framework. Once your technology architecture is benchmarked, the insights feed directly into [DeepDive](/products/deepdive/) for knowledge extraction, and ultimately into [KnowHow](/products/knowhow/) for **operational runbook generation**.
+BenchMark represents the Calibrate phase of our Discover · Calibrate · Decode · Activate framework. It takes the prioritized use-case backlog from [AI Portfolio Explorer](/products/ai-portfolio-explorer/) and grounds it in infrastructure reality. Once your technology architecture is benchmarked, the insights feed directly into [DeepDive](/products/deepdive/) for knowledge extraction, and ultimately into [KnowHow](/products/knowhow/) for **operational runbook generation**.
 
 ### Licensing
 

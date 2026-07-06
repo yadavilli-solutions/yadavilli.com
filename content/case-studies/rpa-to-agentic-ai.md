@@ -13,11 +13,11 @@ The operational burden was immense: a dedicated team of 12 engineers spent most 
 
 ## Our Approach
 
-We implemented a phased transition from RPA to **Agentic AI** using our Calibrate · Decode · Activate framework:
+We implemented a phased transition from RPA to **Agentic AI** using our Discover · Calibrate · Decode · Activate framework:
 
-![Calibrate Decode Activate Product Pipeline](/img/diagrams/product-pipeline.svg)
+![Discover Calibrate Decode Activate Product Pipeline](/img/diagrams/product-pipeline.svg)
 
-The transformation followed three phases: first, we calibrated the environment using BenchMark to map RPA processes; next, we decoded the underlying business logic using DeepDive to build process knowledge graphs; finally, we activated the knowledge by deploying autonomous AI agents to manage exceptions and adapt to UI changes.
+The transformation followed three phases of the framework: first, we calibrated the environment using BenchMark to map RPA processes; next, we decoded the underlying business logic using DeepDive to build process knowledge graphs; finally, we activated the knowledge by deploying autonomous AI agents to manage exceptions and adapt to UI changes.
 
 ## The Results
 

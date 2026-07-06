@@ -14,9 +14,9 @@ The enterprises that win in the next decade must build on AI foundations instead
 
 ## Why We're Different
 
-![Calibrate Decode Activate Product Pipeline](/img/diagrams/product-pipeline.svg)
+![Discover Calibrate Decode Activate Product Pipeline](/img/diagrams/product-pipeline.svg)
 
-- **Products and Services**: We build functional software instead of delivering static presentation decks. The BenchMark, DeepDive, and KnowHow products provide licensable tooling backed by engineering teams.
+- **Products and Services**: We build functional software instead of delivering static presentation decks. The AI Portfolio Explorer, BenchMark, DeepDive, and KnowHow products provide licensable tooling backed by engineering teams.
 - **AI Squads**: Our squads combine AI agents, full-stack engineers, and operations engineers, integrating with your existing teams to accelerate delivery from day one.
 - **Applied AI, Not Theoretical**: We specialize in putting AI into production workflows, including Product Development, QA, DevOps, and Operations, instead of building static demos.
-- **Calibrate · Decode · Activate**: Our three-phase intelligence pipeline takes you from measurement to knowledge extraction to operational excellence, avoiding big-bang transformations.
+- **Discover · Calibrate · Decode · Activate**: Our four-phase intelligence pipeline takes you from use-case discovery through measurement and knowledge extraction to operational excellence, avoiding big-bang transformations.

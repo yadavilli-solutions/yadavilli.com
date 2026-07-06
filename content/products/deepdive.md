@@ -18,7 +18,7 @@ tag: "Knowledge Engineering"
 
 ### How It Fits the Pipeline
 
-DeepDive represents the Decode phase of our Calibrate · Decode · Activate framework. It takes the technology architecture assessment from [BenchMark](/products/benchmark/) to **extract the knowledge needed to power [KnowHow](/products/knowhow/) runbook generation**.
+DeepDive represents the Decode phase of our Discover · Calibrate · Decode · Activate framework. It takes the technology architecture assessment from [BenchMark](/products/benchmark/) to **extract the knowledge needed to power [KnowHow](/products/knowhow/) runbook generation**.
 
 ### Licensing
 

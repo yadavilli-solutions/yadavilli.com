@@ -18,7 +18,7 @@ tag: "Operational Intelligence"
 
 ### How It Fits the Pipeline
 
-KnowHow represents the Activate phase of our Calibrate · Decode · Activate framework. After [BenchMark](/products/benchmark/) calibrates your technology architecture and [DeepDive](/products/deepdive/) decodes your system intelligence, KnowHow **activates that knowledge into operational excellence**.
+KnowHow represents the Activate phase of our Discover · Calibrate · Decode · Activate framework. After [AI Portfolio Explorer](/products/ai-portfolio-explorer/) selects the portfolio, [BenchMark](/products/benchmark/) calibrates your technology architecture, and [DeepDive](/products/deepdive/) decodes your system intelligence, KnowHow **activates that knowledge into operational excellence**.
 
 ### Licensing
 
