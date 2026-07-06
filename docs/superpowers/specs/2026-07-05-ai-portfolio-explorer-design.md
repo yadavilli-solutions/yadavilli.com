@@ -5,7 +5,7 @@ Status: Approved
 
 ## Goal
 
-Add the AI Portfolio Explorer product (repo: https://github.com/thedataengineer/ai-portfolio-explorer, local: `/Users/yakarteek/code/personal/2026-06-27/ai_discovery_tool`) to yadavilli.com as a first-class product, and extend the product framework from three phases to four.
+Add the AI Portfolio Explorer product to yadavilli.com as a first-class product, and extend the product framework from three phases to four.
 
 ## Product facts (from repo README)
 
@@ -34,7 +34,6 @@ Sections, mirroring BenchMark/DeepDive/KnowHow structure:
 - "What AI Portfolio Explorer Does": use-case discovery and inventory; priority matrix scoring; maturity curve; semantic graph; Claude strategy co-pilot; enterprise connectors (Jira, Slack, Teams, Confluence, ServiceNow); REST API and signed webhooks.
 - "How It Fits the Pipeline": Discover phase; the prioritized use-case backlog feeds [BenchMark](/products/benchmark/).
 - "Licensing": per engagement, dedicated full-stack development engineer and two operations engineers (same pattern as siblings).
-- GitHub repo link: https://github.com/thedataengineer/ai-portfolio-explorer.
 
 ### 3. Homepage: `layouts/index.html`
 

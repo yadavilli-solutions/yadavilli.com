@@ -64,8 +64,6 @@ AI Portfolio Explorer represents the Discover phase of our Discover · Calibrate
 ### Licensing
 
 AI Portfolio Explorer is licensed per engagement and includes a dedicated full-stack development engineer and two operations engineers to **run portfolio onboarding, connector configuration, and governance operations**.
-
-The platform source is on GitHub: [thedataengineer/ai-portfolio-explorer](https://github.com/thedataengineer/ai-portfolio-explorer).
 ```
 
 - [ ] **Step 2: Verify the build renders the page**
