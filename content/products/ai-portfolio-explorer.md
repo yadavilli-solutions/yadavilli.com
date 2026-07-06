@@ -13,7 +13,7 @@ tag: "Portfolio Governance"
 
 - **Use-Case Discovery and Inventory**: Capture AI use cases across projects and phases in one multi-tenant workspace, replacing the spreadsheets and slide decks where portfolio decisions go to die.
 - **Priority Matrix and Maturity Curve**: Score every use case on sector-specific dimensions, then read the portfolio at a glance: what to fund, what to kill, what to merge, and what to revisit.
-- **Semantic Graph and Playbook Audits**: Map relationships between use cases, systems, and teams to expose duplicate efforts and hidden dependencies before they become parallel budgets.
+- **Semantic Graph and Playbook Audits**: Map relationships between use cases, systems, and teams to expose duplicate efforts and hidden dependencies before they become parallel budgets, and audit each initiative against its sector playbook.
 - **Claude Strategy Co-Pilot**: Interrogate your portfolio in plain language. The co-pilot drafts scoring rationales, challenges weak business cases, and surfaces portfolio gaps.
 - **Enterprise Connectors**: Wire portfolio decisions into Jira, Slack, Microsoft Teams, Confluence, and ServiceNow so governance happens where delivery already lives.
 - **REST API and Signed Webhooks**: A documented OpenAPI surface and HMAC-signed webhooks with retry, so the portfolio feeds downstream systems instead of becoming another silo.

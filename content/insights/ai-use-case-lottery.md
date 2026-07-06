@@ -1,7 +1,7 @@
 ---
 title: "The Use-Case Lottery"
 date: 2026-07-05
-description: "Enterprises do not have an AI idea shortage. They have a selection problem. Most AI portfolios are stacks of lottery tickets bought by whoever pitched loudest, and the fix is portfolio governance, not more pilots."
+description: "Enterprise AI portfolios fail at selection, not execution. Most are stacks of lottery tickets bought by whoever pitched loudest, and the fix is portfolio governance, not more pilots."
 tag: "Strategy"
 ---
 
