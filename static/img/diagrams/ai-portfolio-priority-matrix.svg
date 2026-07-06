@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 660" width="1200" height="660" font-family="Inter, system-ui, sans-serif">
+  <!-- Background -->
+  <rect width="1200" height="660" fill="#09090b" rx="8" />
+
+  <!-- Title -->
+  <text x="600" y="46" fill="#e4e4e7" font-size="18" font-weight="700" text-anchor="middle">The Portfolio Selection Grid</text>
+  <text x="600" y="70" fill="#71717a" font-size="12" text-anchor="middle">Every use case gets a quadrant and a decision. No side doors.</text>
+
+  <!-- Quadrant: Incubate (high value, low feasibility) -->
+  <g transform="translate(150, 100)">
+    <rect width="440" height="220" fill="#2e1065" fill-opacity="0.25" stroke="#6d28d9" stroke-width="1" rx="6" />
+    <text x="220" y="40" fill="#d8b4fe" font-size="13" font-weight="700" text-anchor="middle" letter-spacing="1.5">INCUBATE</text>
+    <text x="220" y="70" fill="#e4e4e7" font-size="13" text-anchor="middle">High value, not yet feasible</text>
+    <text x="220" y="100" fill="#a1a1aa" font-size="11.5" text-anchor="middle">Fund the readiness gap, not the build:</text>
+    <text x="220" y="122" fill="#a1a1aa" font-size="11.5" text-anchor="middle">data quality, platform, skills</text>
+    <text x="220" y="152" fill="#a1a1aa" font-size="11.5" text-anchor="middle">Re-score on a set date</text>
+  </g>
+
+  <!-- Quadrant: Fund (high value, high feasibility) -->
+  <g transform="translate(610, 100)">
+    <rect width="440" height="220" fill="#052e16" fill-opacity="0.25" stroke="#065f46" stroke-width="1" rx="6" />
+    <text x="220" y="40" fill="#6ee7b7" font-size="13" font-weight="700" text-anchor="middle" letter-spacing="1.5">FUND</text>
+    <text x="220" y="70" fill="#e4e4e7" font-size="13" text-anchor="middle">High value, high feasibility</text>
+    <text x="220" y="100" fill="#a1a1aa" font-size="11.5" text-anchor="middle">Assign an owner and a budget</text>
+    <text x="220" y="122" fill="#a1a1aa" font-size="11.5" text-anchor="middle">Write kill criteria before the first sprint</text>
+    <text x="220" y="152" fill="#a1a1aa" font-size="11.5" text-anchor="middle">Enter the delivery pipeline</text>
+  </g>
+
+  <!-- Quadrant: Kill (low value, low feasibility) -->
+  <g transform="translate(150, 340)">
+    <rect width="440" height="220" fill="#450a0a" fill-opacity="0.25" stroke="#7f1d1d" stroke-width="1" rx="6" />
+    <text x="220" y="40" fill="#fca5a5" font-size="13" font-weight="700" text-anchor="middle" letter-spacing="1.5">KILL</text>
+    <text x="220" y="70" fill="#e4e4e7" font-size="13" text-anchor="middle">Low value, low feasibility</text>
+    <text x="220" y="100" fill="#a1a1aa" font-size="11.5" text-anchor="middle">Terminate now, in writing</text>
+    <text x="220" y="122" fill="#a1a1aa" font-size="11.5" text-anchor="middle">Release the budget and the engineers</text>
+    <text x="220" y="152" fill="#a1a1aa" font-size="11.5" text-anchor="middle">Record why, so it stays dead</text>
+  </g>
+
+  <!-- Quadrant: Merge or defer (low value, high feasibility) -->
+  <g transform="translate(610, 340)">
+    <rect width="440" height="220" fill="#451a03" fill-opacity="0.25" stroke="#78350f" stroke-width="1" rx="6" />
+    <text x="220" y="40" fill="#fde047" font-size="13" font-weight="700" text-anchor="middle" letter-spacing="1.5">MERGE OR DEFER</text>
+    <text x="220" y="70" fill="#e4e4e7" font-size="13" text-anchor="middle">Feasible, but thin value alone</text>
+    <text x="220" y="100" fill="#a1a1aa" font-size="11.5" text-anchor="middle">Fold duplicates into one platform bet</text>
+    <text x="220" y="122" fill="#a1a1aa" font-size="11.5" text-anchor="middle">Park the rest in a scored backlog</text>
+    <text x="220" y="152" fill="#a1a1aa" font-size="11.5" text-anchor="middle">No standing teams, no standing budget</text>
+  </g>
+
+  <!-- Y axis -->
+  <g stroke="#3f3f46" stroke-width="1.5" fill="none">
+    <path d="M 120 560 L 120 100" />
+    <polygon points="120,96 116,104 124,104" fill="#3f3f46" stroke="none" />
+  </g>
+  <text x="112" y="330" fill="#71717a" font-size="12" font-weight="700" letter-spacing="1.5" text-anchor="middle" transform="rotate(-90 112 330)">VALUE</text>
+
+  <!-- X axis -->
+  <g stroke="#3f3f46" stroke-width="1.5" fill="none">
+    <path d="M 150 590 L 1050 590" />
+    <polygon points="1054,590 1046,586 1046,594" fill="#3f3f46" stroke="none" />
+  </g>
+  <text x="600" y="622" fill="#71717a" font-size="12" font-weight="700" letter-spacing="1.5" text-anchor="middle">FEASIBILITY</text>
+</svg>
