@@ -536,7 +536,7 @@ p { color: var(--text-2); }
 
 .method-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
 }
 
@@ -768,7 +768,7 @@ p { color: var(--text-2); }
 
 .products-grid {
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
   align-items: start;
 }
@@ -1486,7 +1486,6 @@ p { color: var(--text-2); }
   .services-grid { grid-template-columns: repeat(2, 1fr); }
 
   .products-grid { grid-template-columns: 1fr 1fr; }
-  .product-card-featured { grid-column: 1 / -1; }
 
   .footer-grid { grid-template-columns: 1fr 1fr; }
 
