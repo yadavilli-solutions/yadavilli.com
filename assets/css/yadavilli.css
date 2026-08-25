@@ -1239,19 +1239,27 @@ p { color: var(--text-2); }
 }
 
 .services-detail-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  align-items: start;
+}
+
+/* An odd offering count would leave a half-width card stranded, so the last
+   one spans the row instead. */
+.services-detail-grid > :last-child:nth-child(odd) {
+  grid-column: 1 / -1;
 }
 
 .service-detail-card {
   display: grid;
   grid-template-columns: auto 1fr;
-  gap: 2rem;
+  gap: 1.5rem;
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
-  padding: 2.5rem;
+  padding: 2rem;
+  height: 100%;
   transition: all 0.3s ease;
 }
 
@@ -1333,13 +1341,18 @@ p { color: var(--text-2); }
 
 .service-features {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 0.5rem;
+}
+
+/* The full-width card at the end has room for two bullet columns. */
+.services-detail-grid > :last-child:nth-child(odd) .service-features {
+  grid-template-columns: 1fr 1fr;
 }
 
 .service-features li {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 0.6rem;
   font-size: 0.875rem;
   color: var(--text-2);
@@ -1350,6 +1363,7 @@ p { color: var(--text-2); }
   content: '';
   width: 6px;
   height: 6px;
+  margin-top: 0.5rem;
   background: var(--cyan);
   border-radius: 50%;
   flex-shrink: 0;
@@ -1577,6 +1591,9 @@ p { color: var(--text-2); }
 
   .method-grid,
   .services-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .services-detail-grid { grid-template-columns: 1fr; }
+  .services-detail-grid > :last-child:nth-child(odd) .service-features { grid-template-columns: 1fr; }
 
   .products-grid { grid-template-columns: 1fr 1fr; }
 
