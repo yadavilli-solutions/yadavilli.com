@@ -9,6 +9,8 @@
     {{ block "main" . }}{{ end }}
   </main>
   {{ partial "footer.html" . }}
-  <script src="/js/yadavilli.js"></script>
+  {{ with resources.Get "js/yadavilli.js" | minify | fingerprint }}
+  <script src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}"></script>
+  {{ end }}
 </body>
 </html>

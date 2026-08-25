@@ -24,6 +24,22 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
+// Safety net. A background tab freezes IntersectionObserver, so a page loaded
+// out of view can be scrolled while every section is still at opacity 0. Sweep
+// anything on screen that the observer has not reached: once after load, and
+// again whenever the tab comes back into view.
+const revealOnScreen = () => {
+  document.querySelectorAll('.fade-up:not(.visible)').forEach(el => {
+    const box = el.getBoundingClientRect();
+    if (box.top < window.innerHeight && box.bottom > 0) el.classList.add('visible');
+  });
+};
+
+window.addEventListener('load', () => setTimeout(revealOnScreen, 1200));
+document.addEventListener('visibilitychange', () => {
+  if (!document.hidden) setTimeout(revealOnScreen, 100);
+});
+
 // Animated stat counters
 const countObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {

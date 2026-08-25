@@ -1287,6 +1287,50 @@ p { color: var(--text-2); }
   line-height: 1.7;
 }
 
+/* Each offering shows its pitch; the detail list opens on demand so the page
+   stays scannable. Native <details> keeps the bullets in the HTML for search
+   engines and find-in-page. */
+.service-more > summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  list-style: none;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--cyan);
+  padding: 0.4rem 0;
+  transition: color var(--transition);
+}
+
+.service-more > summary::-webkit-details-marker { display: none; }
+
+.service-more > summary::after {
+  content: '';
+  width: 7px;
+  height: 7px;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: rotate(45deg) translate(-2px, -2px);
+  transition: transform 0.25s ease;
+}
+
+.service-more[open] > summary::after {
+  transform: rotate(-135deg) translate(-2px, -2px);
+}
+
+.service-more > summary:hover { color: var(--cyan-2); }
+
+.service-more > summary:focus-visible {
+  outline: 2px solid var(--cyan);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+.service-more[open] > summary { margin-bottom: 0.5rem; }
+
 .service-features {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1450,13 +1494,16 @@ p { color: var(--text-2); }
    ANIMATIONS
    ============================================================ */
 
-.fade-up {
+/* Content is visible by default and only hidden once the reveal script is
+   confirmed to be running (html.js is set inline in <head>). Without this
+   guard a blocked or failed script leaves every section at opacity 0. */
+.js .fade-up {
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-.fade-up.visible {
+.js .fade-up.visible {
   opacity: 1;
   transform: translateY(0);
 }
@@ -1512,7 +1559,7 @@ p { color: var(--text-2); }
 @media (prefers-reduced-motion: reduce) {
   .hero-bg { animation: none; }
   .scroll-hint { animation: none; }
-  .fade-up {
+  .js .fade-up {
     opacity: 1;
     transform: none;
     transition: none;
