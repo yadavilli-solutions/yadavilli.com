@@ -2,12 +2,17 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "yadavillidotcom",
   "account_id": "40dfa7ef6eb4855bbf310dbf12d92d84",
+  "main": "worker/index.js",
   "compatibility_date": "2026-05-11",
   "observability": {
     "enabled": true
   },
   "assets": {
-    "directory": "public"
+    "directory": "public",
+    "binding": "ASSETS",
+    // Only the password-gated section is routed through the Worker; every other
+    // path is served straight from the asset bundle at the edge.
+    "run_worker_first": ["/insights", "/insights/*"]
   },
   "compatibility_flags": [
     "nodejs_compat"

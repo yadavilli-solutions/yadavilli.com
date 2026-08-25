@@ -1,0 +1,4 @@
+# Copy to .dev.vars for local `wrangler dev`. Production values are set with
+# `npx wrangler secret put INSIGHTS_PASSWORD` / `... INSIGHTS_COOKIE_SECRET`.
+INSIGHTS_PASSWORD=choose-a-shared-password
+INSIGHTS_COOKIE_SECRET=long-random-string
