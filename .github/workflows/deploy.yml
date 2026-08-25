@@ -36,8 +36,8 @@ jobs:
 
       - name: Post new Insights articles to Substack
         if: success()
-        run: |
-          uv pip install --system python-frontmatter markdown requests -q
+        run: >
+          uv run --with python-frontmatter --with markdown --with requests
           python scripts/post-to-substack.py
         env:
           SUBSTACK_SESSION_COOKIE: ${{ secrets.SUBSTACK_SESSION_COOKIE }}
