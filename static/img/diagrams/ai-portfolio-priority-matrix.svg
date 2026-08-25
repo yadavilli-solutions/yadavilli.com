@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 660" width="1200" height="660" font-family="Inter, system-ui, sans-serif">
   <!-- Background -->
-  <rect width="1200" height="660" fill="#09090b" rx="8" />
+  <rect width="1200" height="660" fill="#02023e" rx="8" />
 
   <!-- Title -->
   <text x="600" y="46" fill="#e4e4e7" font-size="18" font-weight="700" text-anchor="middle">The Portfolio Selection Grid</text>

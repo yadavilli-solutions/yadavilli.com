@@ -1,12 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 612" font-family="Inter, system-ui, sans-serif">
-  <rect width="1200" height="612" fill="#09090b" rx="12"/>
+  <rect width="1200" height="612" fill="#02023e" rx="12"/>
 
   <!-- Title -->
   <text x="600" y="34" fill="#f4f4f5" font-size="17" font-weight="700" text-anchor="middle">Three Trajectories of AI Augmentation</text>
-  <text x="600" y="54" fill="#52525b" font-size="12" text-anchor="middle">What actually happens to a role when AI is introduced, and why each trajectory requires a different measurement approach</text>
+  <text x="600" y="54" fill="#6b7396" font-size="12" text-anchor="middle">What actually happens to a role when AI is introduced, and why each trajectory requires a different measurement approach</text>
 
   <!-- Central hub: x=22 w=200 y=72 h=485 ends=557 -->
-  <rect x="22" y="72" width="200" height="485" fill="#18181b" stroke="#3f3f46" stroke-width="1.5" rx="8"/>
+  <rect x="22" y="72" width="200" height="485" fill="#0c0c52" stroke="#3f3f46" stroke-width="1.5" rx="8"/>
   <text x="122" y="305" fill="#a1a1aa" font-size="13" font-weight="700" text-anchor="middle">AI</text>
   <text x="122" y="325" fill="#a1a1aa" font-size="13" font-weight="700" text-anchor="middle">AUGMENTS</text>
   <text x="122" y="345" fill="#a1a1aa" font-size="13" font-weight="700" text-anchor="middle">A ROLE</text>

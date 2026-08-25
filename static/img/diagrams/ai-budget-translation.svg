@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 400" font-family="Inter, system-ui, sans-serif">
-  <rect width="920" height="400" fill="#09090b" rx="12"/>
+  <rect width="920" height="400" fill="#02023e" rx="12"/>
 
   <!-- Title -->
   <text x="460" y="34" fill="#f4f4f5" font-size="17" font-weight="700" text-anchor="middle">The Budget Translation</text>
-  <text x="460" y="54" fill="#52525b" font-size="12" text-anchor="middle">How actual investment motivations become the only language finance will approve</text>
+  <text x="460" y="54" fill="#6b7396" font-size="12" text-anchor="middle">How actual investment motivations become the only language finance will approve</text>
 
   <!-- LEFT BOX: Real motivations -->
   <rect x="20" y="72" width="270" height="295" fill="#1a0a0a" stroke="#7f1d1d" stroke-width="1.5" rx="8"/>
@@ -35,14 +35,14 @@
   <text x="40" y="366" fill="#71717a" font-size="10">Mimicry dressed as strategy</text>
 
   <!-- CENTER: Filter/Process -->
-  <rect x="320" y="120" width="280" height="200" fill="#18181b" stroke="#3f3f46" stroke-width="1" rx="8"/>
+  <rect x="320" y="120" width="280" height="200" fill="#0c0c52" stroke="#3f3f46" stroke-width="1" rx="8"/>
   <!-- Gear-like decoration at top -->
-  <text x="460" y="162" fill="#52525b" font-size="32" text-anchor="middle">⚙</text>
+  <text x="460" y="162" fill="#6b7396" font-size="32" text-anchor="middle">⚙</text>
   <text x="460" y="200" fill="#a1a1aa" font-size="13" font-weight="700" text-anchor="middle">BUDGET APPROVAL</text>
   <text x="460" y="220" fill="#a1a1aa" font-size="13" font-weight="700" text-anchor="middle">PROCESS</text>
-  <text x="460" y="248" fill="#52525b" font-size="11" text-anchor="middle">DCF requirement</text>
-  <text x="460" y="264" fill="#52525b" font-size="11" text-anchor="middle">Finance sign-off</text>
-  <text x="460" y="280" fill="#52525b" font-size="11" text-anchor="middle">Board presentation</text>
+  <text x="460" y="248" fill="#6b7396" font-size="11" text-anchor="middle">DCF requirement</text>
+  <text x="460" y="264" fill="#6b7396" font-size="11" text-anchor="middle">Finance sign-off</text>
+  <text x="460" y="280" fill="#6b7396" font-size="11" text-anchor="middle">Board presentation</text>
 
   <!-- Arrows left → center -->
   <line x1="292" y1="185" x2="318" y2="185" stroke="#7f1d1d" stroke-width="2"/>

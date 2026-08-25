@@ -4,7 +4,7 @@
     <marker id="ar-gy" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><polygon points="0 0, 9 3.5, 0 7" fill="#71717a"/></marker>
   </defs>
 
-  <rect width="900" height="600" fill="#09090b" rx="14"/>
+  <rect width="900" height="600" fill="#02023e" rx="14"/>
 
   <!-- Title block -->
   <text x="40" y="46" fill="#6ee7b7" font-size="23" font-weight="700">Oracle</text>
@@ -14,7 +14,7 @@
   <!-- Invocation badge -->
   <rect x="788" y="30" width="72" height="24" rx="12" fill="none" stroke="#10b981" stroke-width="1.2"/>
   <text x="824" y="46" fill="#6ee7b7" font-size="10.5" font-weight="700" text-anchor="middle" letter-spacing="0.5">PULL</text>
-  <text x="784" y="20" fill="#52525b" font-size="9" text-anchor="end">SPECIALIST · deep skill, narrow scope</text>
+  <text x="784" y="20" fill="#6b7396" font-size="9" text-anchor="end">SPECIALIST · deep skill, narrow scope</text>
 
   <!-- Domain knowledge cylinder (top) -->
   <g>
@@ -25,7 +25,7 @@
   </g>
 
   <!-- User -->
-  <rect x="70" y="270" width="130" height="72" rx="8" fill="#18181b" stroke="#71717a" stroke-width="1.4"/>
+  <rect x="70" y="270" width="130" height="72" rx="8" fill="#0c0c52" stroke="#71717a" stroke-width="1.4"/>
   <text x="135" y="302" fill="#d4d4d8" font-size="13" font-weight="600" text-anchor="middle">User</text>
   <text x="135" y="320" fill="#8a8a93" font-size="10" text-anchor="middle">asks a question</text>
 
@@ -56,7 +56,7 @@
   <text x="445" y="466" fill="#34d399" font-size="11" font-weight="700" text-anchor="middle">4 · return one grounded answer</text>
 
   <!-- Signature callout -->
-  <text x="463" y="392" fill="#52525b" font-size="10" text-anchor="middle" letter-spacing="0.5">STRUCTURAL SIGNATURE</text>
+  <text x="463" y="392" fill="#6b7396" font-size="10" text-anchor="middle" letter-spacing="0.5">STRUCTURAL SIGNATURE</text>
   <text x="463" y="409" fill="#a1a1aa" font-size="11" text-anchor="middle" font-weight="600">commits to a single authoritative answer — not a ranked list, not a draft</text>
 
   <!-- Divider -->

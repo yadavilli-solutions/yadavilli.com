@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 580" width="900" height="580" font-family="Inter, system-ui, sans-serif">
 
   <!-- Background -->
-  <rect width="900" height="580" fill="#09090b" rx="12"/>
+  <rect width="900" height="580" fill="#02023e" rx="12"/>
 
   <!-- Chart area -->
   <!-- Ungoverned zone (red shaded triangle above diagonal) -->
@@ -73,20 +73,20 @@
 
   <!-- Gate circles on diagonal -->
   <!-- Gate 1 circle: between Stage 1 and 2 -->
-  <circle cx="295" cy="393" r="16" fill="#09090b" stroke="#78716c" stroke-width="1.5"/>
+  <circle cx="295" cy="393" r="16" fill="#02023e" stroke="#78716c" stroke-width="1.5"/>
   <text x="295" y="398" fill="#d4c49a" font-size="12" font-weight="700" text-anchor="middle">1</text>
 
   <!-- Gate 2 circle: between Stage 2 and 3 -->
-  <circle cx="488" cy="287" r="16" fill="#09090b" stroke="#78716c" stroke-width="1.5"/>
+  <circle cx="488" cy="287" r="16" fill="#02023e" stroke="#78716c" stroke-width="1.5"/>
   <text x="488" y="292" fill="#d4c49a" font-size="12" font-weight="700" text-anchor="middle">2</text>
 
   <!-- Gate 3 circle: between Stage 3 and 4 -->
-  <circle cx="672" cy="183" r="16" fill="#09090b" stroke="#78716c" stroke-width="1.5"/>
+  <circle cx="672" cy="183" r="16" fill="#02023e" stroke="#78716c" stroke-width="1.5"/>
   <text x="672" y="188" fill="#d4c49a" font-size="12" font-weight="700" text-anchor="middle">3</text>
 
   <!-- Gate labels at bottom -->
   <line x1="140" y1="510" x2="820" y2="510" stroke="#1f1f24" stroke-width="1"/>
-  <text x="480" y="555" fill="#52525b" font-size="11" text-anchor="middle">
+  <text x="480" y="555" fill="#6b7396" font-size="11" text-anchor="middle">
     Gate 1: data readiness  ·  Gate 2: governance + guardrails  ·  Gate 3: observability + cost routing
   </text>
 

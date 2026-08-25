@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 260" width="1200" height="260" font-family="Inter, system-ui, sans-serif">
   <!-- Background -->
-  <rect width="1200" height="260" fill="#09090b" rx="8" />
+  <rect width="1200" height="260" fill="#02023e" rx="8" />
 
   <!-- Connector 1 -->
   <g stroke="#3f3f46" stroke-width="1.5" fill="none">
