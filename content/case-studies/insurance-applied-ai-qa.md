@@ -11,7 +11,7 @@ A Fortune 100 insurance company was releasing policy administration updates quar
 
 ## Our Approach
 
-We applied our **Applied AI Consulting** practice to transform their QA process:
+We applied our **Applied AI Engineering** practice to transform their QA process:
 
 1. **Knowledge Extraction**: Used DeepDive to reverse-engineer the policy administration system's business rules, building a structured knowledge graph of policy logic, rating algorithms, and regulatory constraints.
 

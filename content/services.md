@@ -1,41 +1,33 @@
 ---
 title: "Our Services"
-description: "Strategic AI advisory, dedicated squads, consulting, and hands-on AI enablement for enterprises."
+description: "AI advisory, pilot-to-production delivery, agentic process automation, embedded squads, and hands-on AI enablement for enterprises."
 layout: "services"
 ---
 
 ## AI Advisory
 
-We advise executive teams on AI strategy, evaluating technologies and designing organizational structures. Our advisory engagements deliver implementation roadmaps grounded in your business reality, not theoretical frameworks.
+We advise executive teams on AI strategy, evaluating technologies and designing organizational structures. Advisory engagements cover feasibility assessment and architecture review, and deliver implementation roadmaps grounded in your business reality, not theoretical frameworks.
 
-## Training & Enablement
+## Operationalization of AI POCs
 
-We train developers and leadership for AI implementation. We deliver hands-on programs calibrated to your team's level, from executive AI literacy workshops to technical engineering sessions on prompt design, agent architecture, and AI-native development practices. Every program is tailored to your tech stack and business context.
+Most enterprise AI stalls between a demo that impressed a steering committee and a system anyone can depend on. We take stalled pilots the rest of the way: **POC triage** to decide what gets promoted, an evaluation harness and regression suite before launch, a production architecture with a real cost model, then runbooks, named ownership, and drift monitoring after go-live. Target is 90 days from pilot to daily use.
+
+## Agentic Process Automation
+
+Rules-based RPA breaks the moment a screen, form, or document layout changes, and the maintenance bill outgrows the savings it was bought for. We replace brittle bot estates with **agents that work from process intent**, call systems through APIs instead of scraping screens, and escalate only the exceptions that need a person. Human approval gates and decision audit trails are part of the design, and we measure the work on straight-through processing rate.
 
 ## AI Squads
 
 Dedicated, embedded teams that ship production AI. Each squad is a cross-functional unit combining AI agents, a full-stack development engineer, and **two operations engineers**, designed to integrate with your existing teams and accelerate delivery from day one. This provides managed AI engineering talent directly inside your workflows.
 
-## AI Consulting
+## Applied AI Engineering
 
-End-to-end AI strategy and implementation consulting. From discovery workshops and feasibility assessments to architecture design, build-out, and production deployment, partnering with your team through the entire lifecycle. We move enterprise pilots to production, eliminating typical organizational stalls.
+AI inside the work your engineers already do: product development, QA, DevOps, and support. We build the integrations, measure whether the output is good enough to trust, and keep prompt architectures under version control like any other code, from chain-of-thought pipelines to multi-agent orchestration.
 
-## Applied AI Consulting
+## AI Platform Operations
 
-Hands-on AI integration into your existing workflows. We integrate AI capabilities directly into product development, QA, DevOps, and operational processes as a **fundamental workflow enhancement**. Whether deploying AI-assisted code review, intelligent test generation, or automated operational workflows, we make AI practical and productive.
+The layer that decides whether AI survives contact with production: **safety, spend, and observability**. Guardrails covering input validation, output filtering, hallucination and toxicity checks, and compliance enforcement. Model performance monitoring, drift detection, and automated remediation. GPU right-sizing and cost attribution that ties AI spend to business outcomes, whether you run on CoreWeave, RunPod, or hyperscaler GPUs.
 
-## Prompt Engineering & Design
+## Training & Enablement
 
-Systematic prompt engineering that turns LLMs into reliable business tools. We design, test, and optimize prompt architectures for your specific use cases, from chain-of-thought reasoning pipelines to multi-agent orchestration patterns. Our approach treats prompts as software: version-controlled, regression-tested, and continuously improved against measurable quality benchmarks.
-
-## AI Guardrails & Safety
-
-Build production-grade safety layers around your AI systems. We implement guardrail frameworks covering input validation, output filtering, toxicity detection, hallucination mitigation, and compliance enforcement. Every guardrail is calibrated to your risk tolerance and regulatory requirements, ensuring your AI systems are safe, auditable, and enterprise-ready.
-
-## FinOps for AI
-
-Optimize your AI infrastructure spend without sacrificing performance. We implement **FinOps disciplines** across your GPU compute, model hosting, and inference pipelines, right-sizing instances, optimizing batch vs. real-time trade-offs, and building cost attribution models that tie AI spend to business outcomes. Whether you're on CoreWeave, RunPod, or hyperscaler GPUs, we ensure every dollar drives measurable value.
-
-## AIOps & Governance
-
-Enterprise-grade operational governance for AI systems at scale. We build the **observability, monitoring, and governance frameworks** your AI portfolio needs: model performance tracking, drift detection, compliance audit trails, and automated remediation pipelines. Our AIOps practice ensures your AI systems stay performant, compliant, and accountable as they scale.
+We train developers and leadership for AI implementation through multi-week cohorts rather than one-off workshops, from executive AI literacy to engineering sessions on prompt design, agent architecture, and AI-native development practices. Every cohort is tailored to your tech stack and business context.
