@@ -13,3 +13,14 @@ resources/_gen/
 !.env.example
 node_modules/
 .claude/
+
+__pycache__/
+
+# terraform
+*.tfplan
+infra/.terraform/
+infra/*.tfstate
+infra/*.tfstate.*
+infra/tfplan
+infra/*.tfplan
+infra/crash.log
