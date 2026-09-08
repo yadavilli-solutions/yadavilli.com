@@ -282,9 +282,17 @@ def build_session(cookie_raw: str) -> requests.Session:
     return session
 
 
-def get_user_id(session: requests.Session) -> int:
-    profile = session.get("https://substack.com/api/v1/user/profile/self").json()
-    return int(profile["id"])
+def get_user_id(session: requests.Session):
+    try:
+        resp = session.get("https://substack.com/api/v1/user/profile/self", timeout=15)
+        if resp.status_code != 200:
+            print(f"Warning: Substack profile request returned HTTP {resp.status_code}")
+            return None
+        profile = resp.json()
+        return int(profile.get("id"))
+    except Exception as e:
+        print(f"Warning: Failed to fetch Substack user profile: {e}")
+        return None
 
 
 def publish(session: requests.Session, user_id: int, md_file: str) -> bool:
@@ -349,6 +357,9 @@ if __name__ == "__main__":
 
     session = build_session(SESSION_COOKIE)
     user_id = get_user_id(session)
+    if not user_id:
+        print("SUBSTACK_SESSION_COOKIE appears expired or invalid - skipping Substack sync")
+        sys.exit(0)
 
     results = [publish(session, user_id, f) for f in files]
     if not all(results):
