@@ -251,18 +251,22 @@ def md_to_prosemirror(content: str) -> str:
 # ---------------------------------------------------------------------------
 
 def get_new_insight_files():
-    """Return insight markdown files added in the last commit."""
-    result = subprocess.run(
-        ["git", "diff", "--name-only", "--diff-filter=A", "HEAD~1", "HEAD"],
-        capture_output=True, text=True
-    )
-    files = result.stdout.strip().split("\n")
-    return [
-        f for f in files
-        if f.startswith("content/insights/")
-        and f.endswith(".md")
-        and "_index" not in f
-    ]
+    """Return insight markdown files added in recent commits."""
+    for ref in ("HEAD~1", "HEAD~2", "HEAD~3"):
+        result = subprocess.run(
+            ["git", "diff", "--name-only", "--diff-filter=A", ref, "HEAD"],
+            capture_output=True, text=True
+        )
+        if result.returncode == 0 and result.stdout.strip():
+            files = [
+                f for f in result.stdout.strip().split("\n")
+                if f.startswith("content/insights/")
+                and f.endswith(".md")
+                and "_index" not in f
+            ]
+            if files:
+                return files
+    return []
 
 
 # ---------------------------------------------------------------------------
