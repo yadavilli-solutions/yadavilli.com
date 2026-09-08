@@ -51,6 +51,10 @@ class _ProseMirrorBuilder(HTMLParser):
         self._text = ""            # buffered text
         self._list_stack = []      # stack of list nodes
         self._in_li = False
+        self._table = None         # table rows accumulator
+        self._tr = None            # table row cells accumulator
+        self._cell_text = ""       # cell text buffer
+        self._in_cell = False
 
     # -- helpers -------------------------------------------------------------
 
@@ -62,7 +66,11 @@ class _ProseMirrorBuilder(HTMLParser):
         node = {"type": "text", "text": t}
         if self._marks:
             node["marks"] = [m.copy() for m in self._marks]
-        self._target().setdefault("content", []).append(node)
+        target = self._target()
+        if isinstance(target, dict):
+            target.setdefault("content", []).append(node)
+        elif isinstance(target, list):
+            target.append({"type": "paragraph", "content": [node]})
 
     def _target(self):
         """Return the content list of the current innermost block."""
@@ -145,7 +153,20 @@ class _ProseMirrorBuilder(HTMLParser):
             self.content.append({"type": "horizontal_rule"})
         elif tag == "br":
             self._flush()
-            self._target().setdefault("content", []).append({"type": "hard_break"})
+            target = self._target()
+            if isinstance(target, dict):
+                target.setdefault("content", []).append({"type": "hard_break"})
+        elif tag == "table":
+            self._flush()
+            self._pop_block()
+            self._table = []
+        elif tag == "tr":
+            if self._table is not None:
+                self._tr = []
+        elif tag in ("th", "td"):
+            if self._table is not None:
+                self._in_cell = True
+                self._cell_text = ""
 
     def handle_endtag(self, tag):
         if tag in ("p", "h1", "h2", "h3", "h4", "h5", "h6", "blockquote", "pre"):
@@ -163,9 +184,43 @@ class _ProseMirrorBuilder(HTMLParser):
             self._remove_mark("code")
         elif tag == "a":
             self._remove_mark("link")
+        elif tag in ("th", "td"):
+            if self._table is not None and self._tr is not None:
+                self._in_cell = False
+                self._tr.append(re.sub(r"\s+", " ", self._cell_text).strip())
+                self._cell_text = ""
+        elif tag == "tr":
+            if self._table is not None and self._tr is not None:
+                if any(self._tr):
+                    self._table.append(self._tr)
+                self._tr = None
+        elif tag == "table":
+            if self._table:
+                num_cols = max(len(row) for row in self._table)
+                for row in self._table:
+                    while len(row) < num_cols:
+                        row.append("")
+                col_widths = [max(len(row[c]) for row in self._table) for c in range(num_cols)]
+                sep = "+-" + "-+-".join("-" * max(w, 1) for w in col_widths) + "-+"
+                lines = [sep]
+                for r_idx, row in enumerate(self._table):
+                    line = "| " + " | ".join(row[c].ljust(col_widths[c]) for c in range(num_cols)) + " |"
+                    lines.append(line)
+                    if r_idx == 0:
+                        lines.append(sep)
+                lines.append(sep)
+                table_str = "\n".join(lines)
+                self.content.append({
+                    "type": "code_block",
+                    "content": [{"type": "text", "text": table_str}],
+                })
+            self._table = None
 
     def handle_data(self, data):
-        self._text += data
+        if self._in_cell:
+            self._cell_text += data
+        else:
+            self._text += data
 
     def get_doc(self):
         self._flush()
