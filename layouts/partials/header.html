@@ -1,32 +1,12 @@
-<header class="site-header" id="site-header">
-  <div class="container">
-    <a href="/" class="logo" aria-label="Yadavilli Solutions — home">
-      <span class="logo-mark" aria-hidden="true">Y</span>
-      <span class="logo-lockup">
-        <span class="logo-text">Yadavilli Solutions</span>
-        <span class="logo-slogan">Solutions Delivered</span>
-      </span>
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a href="/" class="brand" aria-label="Yadavilli Solutions, home">
+      <svg class="brand__mark" width="22" height="22" viewBox="0 0 52 50" aria-hidden="true" focusable="false"><path d="M0 0h12l14 20L40 0h12L31 30v20H21V30Z" fill="currentColor"/></svg>
+      <span class="brand__word">Yadavilli Solutions</span>
     </a>
-    <nav class="nav-desktop">
-      <a href="/" class="{{ if .IsHome }}active{{ end }}">Home</a>
-      <a href="/about/" class="{{ if eq .RelPermalink "/about/" }}active{{ end }}">About</a>
-      <a href="/services/" class="{{ if eq .RelPermalink "/services/" }}active{{ end }}">Services</a>
-      <a href="/products/" class="{{ if eq .RelPermalink "/products/" }}active{{ end }}">Products</a>
-      <a href="/insights/" class="{{ if eq .RelPermalink "/insights/" }}active{{ end }}">Insights</a>
-      <a href="/case-studies/" class="{{ if eq .RelPermalink "/case-studies/" }}active{{ end }}">Case Studies</a>
-    </nav>
-    <a href="/contact/" class="btn-nav">Free Assessment →</a>
-    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
-      <span></span><span></span><span></span>
+    <button type="button" class="theme-toggle" data-theme-toggle aria-label="Switch theme">
+      <svg class="theme-toggle__moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+      <svg class="theme-toggle__sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
     </button>
   </div>
-  <nav class="nav-mobile" id="nav-mobile">
-    <a href="/">Home</a>
-    <a href="/about/">About</a>
-    <a href="/services/">Services</a>
-    <a href="/products/">Products</a>
-    <a href="/insights/">Insights</a>
-    <a href="/case-studies/">Case Studies</a>
-    <a href="/contact/" class="btn-mobile">Free Assessment →</a>
-  </nav>
 </header>

@@ -1,49 +1,46 @@
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
-{{ if hasPrefix .RelPermalink "/insights" }}<meta name="robots" content="noindex, nofollow">{{ end }}
-<!-- Open Graph -->
+<meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+<link rel="canonical" href="{{ .Permalink }}">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f6f5f2" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#121417" media="(prefers-color-scheme: dark)">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{{ .Site.Title }}">
 <meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
 <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
-<meta property="og:type" content="{{ if .IsHome }}website{{ else }}article{{ end }}">
 <meta property="og:url" content="{{ .Permalink }}">
-<meta property="og:site_name" content="{{ .Site.Title }}">
-<meta property="og:image" content="{{ .Site.BaseURL }}img/og-default.png">
-
-<!-- Twitter Card -->
+<meta property="og:image" content="{{ "img/og-default.png" | absURL }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
-<meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
-<meta name="twitter:site" content="@YadavilliAI">
-<meta name="twitter:image" content="{{ .Site.BaseURL }}img/og-default.png">
 
-<!-- JSON-LD -->
 {{ if .IsHome }}
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Yadavilli Solutions","url":"{{ .Site.BaseURL }}","description":"{{ .Site.Params.description }}","sameAs":[]}</script>
-{{ end }}
-{{ if not .IsHome }}
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"{{ .Title }}","datePublished":"{{ .Date.Format "2006-01-02" }}","dateModified":"{{ .Lastmod.Format "2006-01-02" }}","author":{"@type":"Organization","name":"Yadavilli Solutions","url":"{{ .Site.BaseURL }}"},"publisher":{"@type":"Organization","name":"Yadavilli Solutions"},"description":"{{ .Description | default (.Summary | plainify) }}"}
-</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":{{ .Site.Title | jsonify }},"url":{{ .Site.BaseURL | jsonify }},"email":{{ .Site.Params.email | jsonify }},"logo":{{ "img/android-chrome-512x512.png" | absURL | jsonify }}}</script>
 {{ end }}
 
-<!-- Marks the document as script-capable before first paint, so the scroll
-     reveal only hides content when something is there to reveal it. -->
-<script>document.documentElement.classList.add('js')</script>
-
-<!-- Icons -->
+<link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/img/favicon.ico" sizes="any">
-<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
 <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
-<meta name="theme-color" content="#02023e">
 
-<!-- Styles & Fonts -->
-{{ with resources.Get "css/yadavilli.css" | minify | fingerprint }}
+<!-- Fonts are self-hosted; nothing loads from a third-party origin. -->
+<link rel="preload" href="/fonts/newsreader-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+{{ with resources.Get "css/site.css" | minify | fingerprint }}
 <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}">
 {{ end }}
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=Amethysta&family=Questrial&display=swap" rel="stylesheet">
+
+<!-- Runs before first paint: marks script as available and applies a saved theme. -->
+<script>
+  (function () {
+    var root = document.documentElement;
+    root.classList.add('js');
+    try {
+      var theme = localStorage.getItem('theme');
+      if (theme === 'light' || theme === 'dark') root.setAttribute('data-theme', theme);
+    } catch (e) {}
+  })();
+</script>

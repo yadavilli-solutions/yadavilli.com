@@ -1,119 +1,111 @@
 #!/usr/bin/env python3
-"""Generate favicons and the Open Graph card from the Yadavilli Solutions logo kit.
+"""Generate the favicon set and the Open Graph card.
 
-Source of truth: static/img/brand/default-monochrome-white.svg (path outlines, no
-font dependency). Everything else in static/img is derived from it.
+Source of truth: static/img/brand/logo-mark.svg (the Y) and the fonts in
+static/fonts. Everything under static/img other than the brand folder is derived.
 
-Run:  python3 scripts/generate-brand-assets.py
-Deps: cairosvg, pillow
+Rasterizing goes through headless Chrome, so there is no cairo dependency.
+
+Run:  uv run --with pillow python scripts/generate-brand-assets.py
+Env:  CHROME  path to a Chrome/Chromium binary (defaults to the macOS app)
 """
 
-import io
+import os
 import re
+import subprocess
+import tempfile
 from pathlib import Path
 
-import cairosvg
 from PIL import Image
 
 ROOT = Path(__file__).resolve().parent.parent
-LOGOS = ROOT / "static" / "img" / "brand"
+BRAND = ROOT / "static" / "img" / "brand"
 OUT = ROOT / "static" / "img"
+FONTS = ROOT / "static" / "fonts"
 
-CYAN = (0x08, 0xC7, 0xD6)
-NAVY = (0x02, 0x02, 0x3E)
+CHROME = os.environ.get("CHROME", "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome")
 
-# The "Y" glyph inside the wordmark, in the SVG's own user units. Generous bounds:
-# the render is trimmed to its alpha bbox afterwards, so over-shooting is free.
-Y_VIEWBOX = "180 0 130 126"
-
-SVG_NS = 'xmlns="http://www.w3.org/2000/svg"'
-
-
-def read_logo() -> str:
-    return (LOGOS / "default-monochrome-white.svg").read_text()
+STONE = "#f6f5f2"
+INK = "#16181b"
+MUTED = "#55585e"
+STREAK = "#c9a227"
 
 
-def wordmark_group(svg: str) -> str:
-    """First <g> of the logo: the 'Yadavilli Solutions' wordmark path."""
-    return re.search(r"<g\b.*?</g>", svg, re.S).group()
+def mark_path() -> str:
+    return re.search(r'<path d="([^"]+)"', (BRAND / "logo-mark.svg").read_text()).group(1)
 
 
-def render(svg: str, width: int, height: int) -> Image.Image:
-    png = cairosvg.svg2png(bytestring=svg.encode(), output_width=width, output_height=height)
-    return Image.open(io.BytesIO(png)).convert("RGBA")
-
-
-def gradient(width: int, height: int) -> Image.Image:
-    """Diagonal cyan -> navy wash, matching the logo lockup background."""
-    img = Image.new("RGB", (width, height))
-    px = img.load()
-    span = (width - 1) + (height - 1)
-    for y in range(height):
-        for x in range(width):
-            t = (x + y) / span
-            px[x, y] = tuple(round(CYAN[i] + (NAVY[i] - CYAN[i]) * t) for i in range(3))
-    return img.convert("RGBA")
-
-
-def isolate_first_glyph(img: Image.Image, gap: int = 6) -> Image.Image:
-    """Crop to the leftmost inked shape, dropping any neighbouring letter that
-    leaked into the viewBox. Columns of the Y always carry ink somewhere (the
-    stem runs down the middle), so the first blank column run is the letter gap."""
-    alpha = img.getchannel("A").tobytes()
-    w, h = img.width, img.height
-    cols = [sum(alpha[y * w + x] for y in range(h)) for x in range(w)]
-    left = next(x for x, v in enumerate(cols) if v)
-    right = img.width
-    blank = 0
-    for x in range(left, img.width):
-        blank = blank + 1 if cols[x] == 0 else 0
-        if blank >= gap:
-            right = x - gap + 1
-            break
-    return img.crop((left, 0, right, img.height)).crop(
-        img.crop((left, 0, right, img.height)).getbbox()
+def icon_svg(rounded: bool = True) -> str:
+    """Ink tile with the Y in stone. Reads the same on light and dark tabs."""
+    radius = 28 if rounded else 0
+    # The mark is 52 x 50; scale 1.3 fills the 128 tile with even margins.
+    scale = 1.3
+    tx = (128 - 52 * scale) / 2
+    ty = (128 - 50 * scale) / 2
+    return (
+        '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">'
+        f'<rect width="128" height="128" rx="{radius}" fill="{INK}"/>'
+        f'<path transform="translate({tx:.2f} {ty:.2f}) scale({scale})" d="{mark_path()}" fill="{STONE}"/></svg>'
     )
 
 
-def mark(y_glyph: Image.Image, size: int, glyph_ratio: float = 0.52) -> Image.Image:
-    """Square app icon: the Y centred on the brand gradient."""
-    tile = gradient(size, size)
-    target_h = max(1, round(size * glyph_ratio))
-    target_w = max(1, round(y_glyph.width * target_h / y_glyph.height))
-    glyph = y_glyph.resize((target_w, target_h), Image.LANCZOS)
-    tile.alpha_composite(glyph, ((size - target_w) // 2, (size - target_h) // 2))
-    return tile
+def shoot(html: str, dest: Path, width: int, height: int, transparent: bool = False) -> None:
+    with tempfile.TemporaryDirectory() as tmp:
+        page = Path(tmp) / "page.html"
+        page.write_text(html)
+        cmd = [
+            CHROME, "--headless=new", "--disable-gpu", "--hide-scrollbars",
+            "--force-device-scale-factor=1", f"--window-size={width},{height}",
+            f"--screenshot={dest}", f"file://{page}",
+        ]
+        if transparent:
+            cmd.insert(2, "--default-background-color=00000000")
+        subprocess.run(cmd, check=True, capture_output=True)
 
 
-def og_card(svg: str) -> Image.Image:
-    card = gradient(1200, 630)
-    logo_w = 860
-    logo_h = max(1, round(logo_w * 193 / 1762.571162294872))
-    logo = render(svg, logo_w, logo_h)
-    card.alpha_composite(logo, ((1200 - logo_w) // 2, (630 - logo_h) // 2))
-    return card
+def icon_png(size: int, rounded: bool = True) -> Path:
+    dest = OUT / f"icon-{size}.png"
+    html = (
+        "<style>html,body{margin:0;background:transparent}svg{display:block;"
+        f"width:{size}px;height:{size}px}}</style>{icon_svg(rounded)}"
+    )
+    shoot(html, dest, size, size, transparent=True)
+    return dest
+
+
+def og_card() -> None:
+    body = (FONTS / "ibm-plex-sans-latin-600-normal.woff2").as_uri()
+    display = (FONTS / "newsreader-latin-500-normal.woff2").as_uri()
+    html = f"""<style>
+@font-face{{font-family:Plex;src:url({body});font-weight:600}}
+@font-face{{font-family:Newsreader;src:url({display});font-weight:500}}
+html,body{{margin:0;width:1200px;height:630px;background:{STONE};color:{INK}}}
+body{{display:flex;flex-direction:column;justify-content:center;padding:0 112px;box-sizing:border-box;font-family:Plex,system-ui,sans-serif}}
+.brand{{display:flex;align-items:center;gap:22px;font-size:34px;font-weight:600;letter-spacing:-0.01em}}
+.brand svg{{width:40px;height:40px;display:block}}
+h1{{margin:72px 0 0;font-family:Newsreader,Georgia,serif;font-weight:500;font-size:112px;line-height:1.05;letter-spacing:-0.01em}}
+.s{{position:relative;display:inline-block}}
+.s svg{{position:absolute;left:-0.04em;bottom:-0.1em;width:calc(100% + 0.08em);height:0.24em;color:{STREAK}}}
+p{{margin:40px 0 0;font-size:30px;line-height:1.3;color:{MUTED};font-family:Plex,system-ui,sans-serif;font-weight:600}}
+</style>
+<div class="brand"><svg viewBox="0 0 52 50"><path d="{mark_path()}" fill="{INK}"/></svg>Yadavilli Solutions</div>
+<h1>A <span class="s">holding<svg viewBox="0 0 200 12" preserveAspectRatio="none"><path d="M3 9C50 5 110 7 197 3" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/></svg></span> company.</h1>
+<p>hello@yadavilli.com</p>"""
+    shoot(html, OUT / "og-default.png", 1200, 630)
 
 
 def main() -> None:
-    svg = read_logo()
-    y_svg = f'<svg {SVG_NS} viewBox="{Y_VIEWBOX}">{wordmark_group(svg)}</svg>'
-    y_glyph = isolate_first_glyph(render(y_svg, 1024, 1094))
+    (OUT / "favicon.svg").write_text(icon_svg())
 
-    for name, size in [
-        ("favicon-16x16.png", 16),
-        ("favicon-32x32.png", 32),
-        ("apple-touch-icon.png", 180),
-        ("android-chrome-192x192.png", 192),
-        ("android-chrome-512x512.png", 512),
-    ]:
-        mark(y_glyph, size).save(OUT / name)
-        print("wrote", name)
+    sizes = {16: "favicon-16x16.png", 32: "favicon-32x32.png", 180: "apple-touch-icon.png",
+             192: "android-chrome-192x192.png", 512: "android-chrome-512x512.png"}
+    for size, name in sizes.items():
+        tmp = icon_png(size, rounded=size not in (180,))
+        tmp.replace(OUT / name)
 
-    mark(y_glyph, 256).save(OUT / "favicon.ico", sizes=[(16, 16), (32, 32), (48, 48)])
-    print("wrote favicon.ico")
-
-    og_card(svg).convert("RGB").save(OUT / "og-default.png", optimize=True)
-    print("wrote og-default.png")
+    Image.open(OUT / "favicon-32x32.png").save(OUT / "favicon.ico", sizes=[(16, 16), (32, 32)])
+    og_card()
+    print("favicon set and og-default.png written")
 
 
 if __name__ == "__main__":

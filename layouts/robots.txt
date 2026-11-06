@@ -1,5 +1,4 @@
 User-agent: *
-Disallow: /insights/
 Allow: /
 
 Sitemap: {{ .Site.BaseURL }}sitemap.xml

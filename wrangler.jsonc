@@ -2,19 +2,11 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "yadavillidotcom",
   "account_id": "40dfa7ef6eb4855bbf310dbf12d92d84",
-  "main": "worker/index.js",
   "compatibility_date": "2026-05-11",
-  "observability": {
-    "enabled": true
-  },
+  // Static assets only. Redirects come from public/_redirects, which Hugo
+  // copies from static/_redirects; there is no Worker script.
   "assets": {
     "directory": "public",
-    "binding": "ASSETS",
-    // Only the password-gated section is routed through the Worker; every other
-    // path is served straight from the asset bundle at the edge.
-    "run_worker_first": ["/insights", "/insights/*"]
-  },
-  "compatibility_flags": [
-    "nodejs_compat"
-  ]
+    "not_found_handling": "404-page"
+  }
 }
