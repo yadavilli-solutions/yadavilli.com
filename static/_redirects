@@ -1,17 +1,21 @@
-# Retired sections moved to basantra.com. Specific rules before splats.
+# Retired sections moved to basantra.com.
+# All exact-path rules come first: production gives a splat priority over
+# any exact rule written below it, so no exact rule may follow a splat.
 /about/                          https://basantra.com/about/                           301
 /about                           https://basantra.com/about/                           301
 /services/                       https://basantra.com/services/                        301
 /services                        https://basantra.com/services/                        301
 /products/ai-portfolio-explorer/ https://basantra.com/products/ai-portfolio-explorer/  301
 /products/ai-portfolio-explorer  https://basantra.com/products/ai-portfolio-explorer/  301
-/products/*                      https://basantra.com/products/                        301
 /products                        https://basantra.com/products/                        301
 /insights/index.xml              https://basantra.com/insights/rss.xml                 301
 /index.xml                       https://basantra.com/insights/rss.xml                 301
-/insights/*                      https://basantra.com/insights/:splat                  301
 /insights                        https://basantra.com/insights/                        301
-/case-studies/*                  https://basantra.com/                                 301
 /case-studies                    https://basantra.com/                                 301
 /contact/                        /                                                     301
 /contact                         /                                                     301
+
+# Splats last.
+/products/*                      https://basantra.com/products/                        301
+/insights/*                      https://basantra.com/insights/:splat                  301
+/case-studies/*                  https://basantra.com/                                 301
